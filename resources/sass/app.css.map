@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACQ,6DAAqD;ACD7D,UAAW;EACT,KAAK,EAAE,KAAK;EACZ,gBAAgB,EAAE,GAAG",
+"sources": ["app.scss","Post.scss"],
+"names": [],
+"file": "app.css"
+}

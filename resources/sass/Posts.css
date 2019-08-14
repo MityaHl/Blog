@@ -1,0 +1,28 @@
+.post {
+  margin-bottom: 30px; }
+
+.post-author {
+  float: right; }
+  .post-author h4 {
+    float: left;
+    margin-right: 10px; }
+  .post-author img {
+    float: right;
+    width: 60px;
+    height: 60px; }
+
+.post-name {
+  float: left; }
+
+.post-info .image {
+  width: 45%;
+  float: left; }
+.post-info .main-info {
+  width: 55%;
+  float: right; }
+.post-info img {
+  max-width: 90%;
+  height: auto;
+  margin-bottom: 10px; }
+
+/*# sourceMappingURL=Posts.css.map */
