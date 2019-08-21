@@ -26,6 +26,12 @@ class Header extends Component{
                                 <button className="btn"> Категории </button>
                             </Link>
                         </div>
+
+                        <div className="list-inline-item">
+                            <Link to={'/profile'}>
+                                <button className="btn"> Профиль </button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

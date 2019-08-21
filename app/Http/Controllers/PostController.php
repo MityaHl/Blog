@@ -12,4 +12,10 @@ class PostController extends Controller
         $posts = Post::all();
         return response()->json($posts);
     }
+
+    public function showComments ($id)
+    {
+        $comments = Post::find($id)->comment;
+        return response()->json($comments);
+    }
 }

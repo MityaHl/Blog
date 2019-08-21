@@ -10712,3 +10712,16 @@ a.text-dark:focus {
   height: 56px;
 }
 
+.form-control {
+  margin-bottom: 30px;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+.user-info img {
+  width: 200px;
+  max-height: 90%;
+}
+

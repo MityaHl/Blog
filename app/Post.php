@@ -16,7 +16,17 @@ class Post extends Model
 
     public function author()
     {
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
     }
 
     public static function add($fields)

@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Header from './Header/Header';
 import MainPage from './MainPage/MainPage';
 import Posts from './Posts/Posts';
-import Post from './Posts/Post/Post';
+import Profile from './Profile/Profile'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Categories from "./Categories/Categories";
 
@@ -16,7 +16,7 @@ class App extends Component{
                         <Route path={'/'} exact component={ MainPage } />
                         <Route path={'/posts'} component={ Posts } />
                         <Route path={'/categories'} component={ Categories } />
-                        <Route path={'/posts/:id'} component={ Post } />
+                        <Route path={'/profile'} component={ Profile } />
                     </Switch>
                 </BrowserRouter>
         )

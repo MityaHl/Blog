@@ -62,34 +62,7 @@ class Posts extends Component {
             <div>
                 {
                     this.state.posts.map((post, index) => (
-                        <div className="post card text-center" key={post.id}>
-                            <div className="card-header">
-                                <div className="post-name">
-                                    <h2>{post.title}</h2>
-                                    <p className="text-left">Категория: {categories[post.category_id-1].title}</p>
-                                </div>
-                                <div className="post-author">
-                                    <h4>{authors[post.author_id-1].name}</h4>
-                                    <img src="https://sun9-55.userapi.com/c836435/v836435967/2c962/ZjNR1MUQ3MU.jpg" alt=""
-                                         className="rounded-circle"/>
-                                </div>
-                            </div>
-                            <div className="post-info card-body">
-                                <div className="image">
-                                    <img src={post.image} alt=""
-                                         className="mx-auto d-block"/>
-                                </div>
-                                <div className="main-info d-flex flex-column">
-                                    <div className="info-text">
-                                        <p className="text-justify card-text"> {post.content} </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="full-post-btn">
-                                    <button data-toggle="button" className="btn btn-outline-secondary" >Читать</button>
-
-                            </div>
-                        </div>
+                        <Post post={post} authors={authors} categories={categories}/>
                     ))
                 }
             </div>
@@ -102,7 +75,7 @@ class Posts extends Component {
         return (
             <div className="container">
                 {
-                    categories instanceof Array && authors instanceof Array && this.state.count ? (this.showPosts(authors, categories)) : (this.showNothing())
+                     categories instanceof Array && authors instanceof Array && this.state.count ? (this.showPosts(authors, categories)) : (this.showNothing())
                 }
             </div>
         )

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import Post from "../Posts/Post/Post";
 
 class Categories extends Component {
 
@@ -9,6 +10,7 @@ class Categories extends Component {
         this.promiseRequests = this.promiseRequests.bind(this);
         this.showCategoriesPage = this.showCategoriesPage.bind(this);
         this.showNothing = this.showNothing.bind(this);
+        this.showCategory = this.showCategory.bind(this);
         this.selectCategory = this.selectCategory.bind(this);
     }
 
@@ -52,53 +54,45 @@ class Categories extends Component {
             })
     }
 
-    selectCategory(posts, categories, authors, value) {
+    selectCategory(e) {
+        console.log("selectCategory");
+        this.setState({
+            value: Number(e.target.value)
+        });
+    }
+
+    showCategory(posts, authors, categories) {
+        let newPosts = [];
+        if(this.state.value == 0) {
+            newPosts = posts;
+        } else{
+            for(let i = 0; i < posts.length; i++) {
+                if(posts[i].category_id === this.state.value) {
+                    newPosts.push(posts[i]);
+                }
+            }
+        }
+
         return(
             <div>
                 {
-                    posts.map((post, index) => (
-                        <div className="post card text-center" key={post.id}>
-                            <div className="card-header">
-                                <div className="post-name">
-                                    <h2>{post.title}</h2>
-                                    <p className="text-left">Категория: {categories[post.category_id-1].title}</p>
-                                </div>
-                                <div className="post-author">
-                                    <h4>{authors[post.author_id-1].name}</h4>
-                                    <img src="https://sun9-55.userapi.com/c836435/v836435967/2c962/ZjNR1MUQ3MU.jpg" alt=""
-                                         className="rounded-circle"/>
-                                </div>
-                            </div>
-                            <div className="post-info card-body">
-                                <div className="image">
-                                    <img src={post.image} alt=""
-                                         className="mx-auto d-block"/>
-                                </div>
-                                <div className="main-info d-flex flex-column">
-                                    <div className="info-text">
-                                        <p className="text-justify card-text"> {post.content} </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="full-post-btn">
-                                <button data-toggle="button" className="btn btn-outline-secondary" >Читать</button>
-
-                            </div>
-                        </div>
+                    newPosts.map((post, index) => (
+                             <Post key={index} post={post} authors={authors} categories={categories}/>
                     ))
                 }
             </div>
         )
     }
 
-    showCategoriesPage(posts, categories, authors) {
+    showCategoriesPage(posts, authors, categories) {
         return (
-            <div>
-                <select className="form-control" onChange={this.selectCategory(posts, categories, authors, this.state.value)}>
-                    <option selected value="all">Все категории</option>
-                    <option value="auto">Авто</option>
-                    <option value="food">Еда</option>
+            <div className="category_select">
+                <select className="form-control" onChange={this.selectCategory}>
+                    <option selected value="0">Все категории</option>
+                    <option value="1">Авто</option>
+                    <option value="2">Еда</option>
                 </select>
+                {this.showCategory(posts, authors, categories)}
             </div>
         )
     }
@@ -118,7 +112,7 @@ class Categories extends Component {
         return (
             <div className="container">
                 {
-                    this.state.dataIsLoad && this.state.posts instanceof Array && this.state.categories instanceof Array ? (this.showCategoriesPage(posts, categories, authors)) : (this.showNothing())
+                    this.state.dataIsLoad && this.state.posts instanceof Array && this.state.categories instanceof Array ? (this.showCategoriesPage(posts, authors, categories)) : (this.showNothing())
                 }
             </div>
         )
