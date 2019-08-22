@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Post extends Component {
 
@@ -32,8 +33,9 @@ class Post extends Component {
                         </div>
                     </div>
                     <div className="full-post-btn">
-                        <button data-toggle="button" className="btn btn-outline-secondary" >Читать</button>
-
+                        <Link to={'/fullpost/' + this.props.post.id}>
+                            <button className="btn btn-outline-secondary" >Читать</button>
+                        </Link>
                     </div>
                 </div>
             )

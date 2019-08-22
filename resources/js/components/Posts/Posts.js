@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Post from '../Posts/Post/Post'
 class Posts extends Component {
