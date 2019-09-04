@@ -16,7 +16,11 @@ class Post extends Component {
                             <p className="text-left">Категория: {this.props.categories[this.props.post.category_id-1].title}</p>
                         </div>
                         <div className="post-author">
-                            <h4>{this.props.authors[this.props.post.author_id-1].name}</h4>
+                            <h4>
+                                <Link to={'/author/' + this.props.post.author_id}>
+                                    {this.props.authors.find(this.props.post.author_id)}
+                                </Link>
+                            </h4>
                             <img src="https://sun9-55.userapi.com/c836435/v836435967/2c962/ZjNR1MUQ3MU.jpg" alt=""
                                  className="rounded-circle"/>
                         </div>

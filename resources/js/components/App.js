@@ -19,6 +19,7 @@ class App extends Component{
                         <Route path={'/categories'} component={ Categories } />
                         <Route path={'/profile'} component={ Profile } />
                         <Route path={'/fullpost/:id'} component={ FullPost } />
+                        <Route path={'/author/:id'} component={ Profile } />
                     </Switch>
                 </BrowserRouter>
         )

@@ -12,3 +12,12 @@
 @import 'Categories';
 @import 'Profile';
 @import 'FullPost';
+
+
+.spinner-block {
+  height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

@@ -52,8 +52,10 @@ class Posts extends Component {
 
     showNothing() {
         return (
-            <div>
-                <h1>Жди!</h1>
+            <div className="spinner-block">
+                <div className="spinner-border">
+
+                </div>
             </div>
         )
     }

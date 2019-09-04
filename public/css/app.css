@@ -10721,13 +10721,34 @@ body {
 }
 
 .user-info img {
-  width: 200px;
+  width: 250px;
   max-height: 90%;
+  margin-bottom: 10px;
+}
+
+.profile-posts-button {
+  float: right;
+}
+
+.profile-posts-titles {
+  float: left;
 }
 
 .post-img img {
   max-width: 70%;
   height: auto;
   margin-bottom: 20px;
+}
+
+.post-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.spinner-block {
+  height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 

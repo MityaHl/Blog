@@ -4,6 +4,11 @@ class MainPage extends Component{
     render() {
         return (
             <div className="container">
+                <div className="row">
+                    <div className="col-md-3">
+                        <img src="https://i.gifer.com/6os.gif" alt=""/>
+                    </div>
+                </div>
 
                 <div>Consequuntur, maiores, rerum. Assumenda cumque esse in, laboriosam maxime molestias numquam optio,
                     quaerat quia sint sit sunt velit. Accusantium, blanditiis esse est explicabo illum perspiciatis

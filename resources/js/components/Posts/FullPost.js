@@ -6,19 +6,33 @@ class FullPost extends Component {
     constructor(props) {
         super(props);
         this.state = { post: {}};
+        this.promiseRequests = this.promiseRequests.bind(this);
+    }
+
+    promiseRequests() {
+        let promCount = 0;
+        return new Promise( resolve => {
+            axios
+                .get('/api/posts/'+ this.props.match.params.id)
+                .then(response => {
+                    this.setState({post: response.data });
+                    if(promCount == 1) resolve();
+                })
+        })
     }
 
     componentWillMount() {
-        axios
-            .get('/api/posts/'+ this.props.match.params.id)
-            .then(response => {
-                this.setState({post: response.data });
+        this.promiseRequests()
+            .then(() => {
+                this.setState({
+                    count: true
+                });
             })
     }
 
     render() {
         return (
-            <div className="container">
+            <div className="container border border-secondary rounded">
                 <div className="post-title">
                     <h1>{this.state.post.title}</h1>
                 </div>
@@ -34,13 +48,6 @@ class FullPost extends Component {
                 <div className="post-comments">
                     {
 
-                        console.log(this.state.post)
-                   /*
-                        this.state.post.comments.map((comment, index) => (
-                                <div>
-                                    <p>{comment.text}</p>
-                                </div>
-                        ))*/
                     }
                 </div>
             </div>

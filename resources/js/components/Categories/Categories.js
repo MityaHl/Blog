@@ -98,11 +98,13 @@ class Categories extends Component {
     }
 
     showNothing() {
-        return(
-                <div>
-                    <h1>жди</h1>
+        return (
+            <div className="spinner-block">
+                <div className="spinner-border">
+
                 </div>
-            )
+            </div>
+        )
     }
 
     render() {
