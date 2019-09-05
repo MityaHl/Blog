@@ -10745,6 +10745,16 @@ body {
   margin-bottom: 15px;
 }
 
+.main-page-auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-buttons {
+  width: 100%;
+}
+
 .spinner-block {
   height: calc(100vh - 160px);
   display: flex;

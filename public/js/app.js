@@ -66141,8 +66141,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Posts_Posts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Posts/Posts */ "./resources/js/components/Posts/Posts.js");
 /* harmony import */ var _Posts_FullPost__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Posts/FullPost */ "./resources/js/components/Posts/FullPost.js");
 /* harmony import */ var _Profile_Profile__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Profile/Profile */ "./resources/js/components/Profile/Profile.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _Categories_Categories__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Categories/Categories */ "./resources/js/components/Categories/Categories.js");
+/* harmony import */ var _Auth_Registration__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Auth/Registration */ "./resources/js/components/Auth/Registration.js");
+/* harmony import */ var _Auth_Authorization__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Auth/Authorization */ "./resources/js/components/Auth/Authorization.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _Categories_Categories__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Categories/Categories */ "./resources/js/components/Categories/Categories.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66171,6 +66173,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
 var App =
 /*#__PURE__*/
 function (_Component) {
@@ -66185,23 +66189,29 @@ function (_Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Route"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
         path: '/',
         exact: true,
         component: _MainPage_MainPage__WEBPACK_IMPORTED_MODULE_3__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Route"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
         path: '/posts',
         component: _Posts_Posts__WEBPACK_IMPORTED_MODULE_4__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Route"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+        path: '/auth',
+        component: _Auth_Authorization__WEBPACK_IMPORTED_MODULE_8__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
         path: '/categories',
-        component: _Categories_Categories__WEBPACK_IMPORTED_MODULE_8__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Route"], {
+        component: _Categories_Categories__WEBPACK_IMPORTED_MODULE_10__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+        path: '/registration',
+        component: _Auth_Registration__WEBPACK_IMPORTED_MODULE_7__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
         path: '/profile',
         component: _Profile_Profile__WEBPACK_IMPORTED_MODULE_6__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Route"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
         path: '/fullpost/:id',
         component: _Posts_FullPost__WEBPACK_IMPORTED_MODULE_5__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Route"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
         path: '/author/:id',
         component: _Profile_Profile__WEBPACK_IMPORTED_MODULE_6__["default"]
       })));
@@ -66212,6 +66222,140 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/Authorization.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/Auth/Authorization.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var Authorization =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Authorization, _Component);
+
+  function Authorization() {
+    _classCallCheck(this, Authorization);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Authorization).apply(this, arguments));
+  }
+
+  _createClass(Authorization, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "!!!!!!!!!!!!!!!!!!!");
+    }
+  }]);
+
+  return Authorization;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Authorization);
+
+/***/ }),
+
+/***/ "./resources/js/components/Auth/Registration.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/Auth/Registration.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var Registration =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Registration, _Component);
+
+  function Registration() {
+    _classCallCheck(this, Registration);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Registration).apply(this, arguments));
+  }
+
+  _createClass(Registration, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "exampleInputEmail1"
+      }, "Email \u0430\u0434\u0440\u0435\u0441"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "email",
+        className: "form-control",
+        id: "exampleInputEmail1",
+        "aria-describedby": "emailHelp",
+        placeholder: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 email"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "exampleInputPassword1"
+      }, "\u041F\u0430\u0440\u043E\u043B\u044C"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "password",
+        className: "form-control",
+        id: "exampleInputPassword1",
+        placeholder: "\u041F\u0430\u0440\u043E\u043B\u044C"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "submit",
+        className: "btn btn-outline-secondary"
+      }, "\u0417\u0430\u0440\u0435\u0433\u0435\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F")));
+    }
+  }]);
+
+  return Registration;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Registration);
 
 /***/ }),
 
@@ -66576,6 +66720,14 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Auth_Registration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Auth/Registration */ "./resources/js/components/Auth/Registration.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _Header_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Header/Header */ "./resources/js/components/Header/Header.js");
+/* harmony import */ var _Posts_Posts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Posts/Posts */ "./resources/js/components/Posts/Posts.js");
+/* harmony import */ var _Auth_Authorization__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Auth/Authorization */ "./resources/js/components/Auth/Authorization.js");
+/* harmony import */ var _Categories_Categories__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Categories/Categories */ "./resources/js/components/Categories/Categories.js");
+/* harmony import */ var _Profile_Profile__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Profile/Profile */ "./resources/js/components/Profile/Profile.js");
+/* harmony import */ var _Posts_FullPost__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Posts/FullPost */ "./resources/js/components/Posts/FullPost.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66586,13 +66738,21 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+
 
 
 
@@ -66601,13 +66761,27 @@ var MainPage =
 function (_Component) {
   _inherits(MainPage, _Component);
 
-  function MainPage() {
+  function MainPage(props) {
+    var _this;
+
     _classCallCheck(this, MainPage);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(MainPage).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(MainPage).call(this, props));
+    _this.state = {
+      prop: true
+    };
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(MainPage, [{
+    key: "handleClick",
+    value: function handleClick() {
+      this.setState({
+        prop: !this.state.prop
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -66619,7 +66793,25 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://i.gifer.com/6os.gif",
         alt: ""
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Consequuntur, maiores, rerum. Assumenda cumque esse in, laboriosam maxime molestias numquam optio, quaerat quia sint sit sunt velit. Accusantium, blanditiis esse est explicabo illum perspiciatis provident repellat sint sunt vel."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Exercitationem molestiae quisquam recusandae suscipit. Aliquam autem consectetur consequuntur deleniti doloribus eaque est explicabo facere facilis iste iusto magni nemo nostrum officiis perferendis quaerat rem repellat sit suscipit, unde vitae."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Beatae cupiditate debitis eveniet iure rem rerum sint totam unde. Aperiam corporis debitis doloribus est excepturi id maxime molestiae neque non perferendis perspiciatis quas quibusdam sit soluta tenetur vitae, voluptates!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Commodi cupiditate ducimus, illo incidunt molestiae non, optio porro possimus praesentium ratione recusandae veniam? Animi corporis exercitationem fugiat laboriosam maiores quaerat repellat repellendus vel. Assumenda beatae dolores inventore vel voluptatum."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Aliquid autem beatae commodi corporis distinctio dolor exercitationem modi, nemo, neque obcaecati placeat quas, rem rerum sit soluta ut vitae! Asperiores eius ipsum magni molestias, odit omnis perspiciatis porro soluta!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Hic illum, laudantium magnam perspiciatis porro provident quia repellendus sed. Accusamus aliquam, consequuntur enim impedit in odio reiciendis tempora tempore. Aliquam corporis dignissimos doloribus excepturi exercitationem, minima reiciendis voluptatem! Facilis!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Accusantium aliquam architecto aspernatur autem ea ex facere illo, ipsum iste iusto laborum modi mollitia nam natus officiis optio, placeat possimus quis recusandae repellat rerum tempora tempore totam ut vel!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "At blanditiis deserunt doloremque eaque earum error esse eveniet excepturi fuga, iusto minima molestiae natus necessitatibus, nemo, nihil obcaecati odio quae quas quos sequi sunt tempora totam veniam veritatis voluptatem?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Consectetur ducimus eaque fuga nulla sunt! A accusamus accusantium consectetur consequatur delectus dicta ducimus eveniet, iure labore laudantium omnis pariatur porro provident quos rerum sint tempora velit! Deleniti eos, velit?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Eligendi enim et facere itaque iusto repellendus repudiandae sapiente tempore ullam vero. Accusantium beatae cupiditate dolore dolorum eos, ex, fugit illum labore nostrum omnis quae reiciendis rerum sit. Modi, perferendis."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "A error ex impedit iste magnam, maiores minima, nam natus officiis perferendis perspiciatis possimus quae quis saepe sint sunt suscipit tempora tempore, veniam voluptatem! Doloribus nam obcaecati quisquam soluta totam."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Ad aperiam architecto, beatae blanditiis consequatur dolorum earum eos eum eveniet, exercitationem facere fuga incidunt iste laudantium minima nulla omnis optio possimus praesentium quasi, quis quod recusandae repellat sunt voluptatum."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Enim error facilis fugiat, inventore laboriosam obcaecati quibusdam repudiandae sit totam voluptate. Adipisci, dolor dolorem eligendi enim fugiat id illo in ipsum itaque minus ratione rem sequi totam voluptas, voluptate?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Architecto autem eaque quasi quis reiciendis voluptates voluptatum. Accusamus amet beatae consectetur culpa eos est illum incidunt maiores minus nam numquam officiis perspiciatis sequi, sunt, tenetur ullam vitae voluptatibus voluptatum!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Ad aliquam, aperiam corporis dolore ducimus esse hic illum inventore ipsum maxime nostrum officiis porro, provident quae recusandae rem repellendus repudiandae vel veniam voluptates. Aliquam dolorem incidunt praesentium vitae voluptates!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Accusamus aliquam at autem cum debitis doloremque dolorum ea esse ex explicabo fugit in libero magni neque nesciunt nisi nulla officia, provident quibusdam quidem reiciendis repudiandae similique, suscipit tempora vitae."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Delectus doloribus ducimus eum fugit maxime pariatur, placeat repudiandae sed vel! Amet consectetur dolore dolorum ea fugiat fugit maiores nostrum. Ea eveniet obcaecati repellat vel voluptas. Cumque illo quam sint."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Asperiores atque consectetur corporis, debitis dignissimos dolore earum eius est maiores minima necessitatibus nisi, odit perferendis porro, quia repellendus reprehenderit ut veritatis. Atque dolor eveniet fuga magnam omnis sed veniam."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Aliquid amet architecto, deserunt dignissimos dolores eaque error est facere neque pariatur perspiciatis provident, saepe soluta sunt velit voluptate voluptatem? Adipisci delectus enim magni nulla officia possimus, praesentium veniam! Doloremque?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Debitis eaque harum maxime numquam quae sed tempora ullam. Autem beatae corporis cupiditate doloremque dolorum eligendi enim explicabo facilis illum nihil nobis obcaecati odit perferendis possimus, provident quos ratione veniam."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Animi et facilis fuga minima nemo reprehenderit similique. Ad aliquam aperiam explicabo, harum illum laboriosam, maiores molestias nobis perferendis porro praesentium, recusandae repellat sit veniam voluptatibus. Dolore inventore natus recusandae!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Aliquam blanditiis consectetur corporis culpa delectus dignissimos dolore eius eligendi esse expedita, fugit, illum labore maiores minus molestiae non nulla numquam praesentium qui quidem soluta temporibus veritatis vitae voluptatem, voluptatibus!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Culpa dignissimos facere modi, molestias porro quas! Libero, quisquam, voluptatum? Alias assumenda atque blanditiis consequuntur culpa debitis dolorum ducimus eaque facilis incidunt inventore magni nam, quae repellat repudiandae sunt voluptas."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Alias aliquam consequatur deleniti doloribus dolorum eaque error eum eveniet excepturi expedita, maiores maxime, minus mollitia nam non, pariatur ratione! Consequuntur cupiditate, doloremque eaque error libero neque nisi sunt vero?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Ducimus est et expedita facilis impedit nam quos sed, totam! Amet cum iusto nemo nihil nisi officia quaerat reprehenderit tempora tempore voluptatum! Architecto consequatur ex exercitationem harum minus nisi numquam?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "A accusantium adipisci aut beatae consequatur corporis delectus dicta dignissimos, dolor eius eligendi eos error eum facere facilis fugiat ipsam iste iusto libero mollitia nulla perspiciatis quibusdam quidem quis soluta!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Architecto corporis cumque debitis deleniti eveniet impedit inventore itaque, nemo quasi sapiente tenetur voluptas! At cupiditate eius voluptates! Accusantium aspernatur eius hic laudantium neque odio quidem quos sint temporibus ullam!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Architecto atque doloribus fuga ipsum itaque officia praesentium repellat! Ab cum delectus dolorem dolorum expedita fuga harum, illum iusto, libero nostrum, obcaecati officiis qui quia rerum sit vel vero voluptatibus!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Aliquam amet animi, architecto assumenda at aut doloremque eius eos error eveniet iste labore maiores maxime minus nam nesciunt non quam quia quisquam sed, sint sunt veniam vitae! A, incidunt?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Cum impedit nesciunt tempore. Ab dignissimos inventore magnam? Amet aperiam asperiores assumenda, atque culpa deleniti, dicta dolores ducimus eaque eos exercitationem explicabo itaque libero minima nobis porro sequi, voluptates voluptatum."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Facilis fugiat itaque nam ratione. Asperiores, commodi consequuntur cumque delectus earum iusto laborum nemo neque officiis porro, ratione rerum voluptatem voluptatum. Accusantium excepturi expedita harum illum in magni necessitatibus, velit!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Accusantium iusto laborum omnis pariatur, quod reiciendis temporibus! Consectetur consequatur culpa cum dolore est in quis sint, voluptatum. Dolor natus obcaecati officia? Adipisci excepturi facere inventore quibusdam rerum tempora ut!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Illo nam nobis perspiciatis voluptate. A accusantium alias, aspernatur debitis deleniti dicta dolorem doloribus dolorum fugiat iusto necessitatibus nesciunt odit omnis pariatur quibusdam quidem reiciendis reprehenderit rerum similique velit voluptatum?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Aperiam architecto consequatur dignissimos dolor illum laboriosam nobis quaerat quisquam quos ratione similique tempora, tenetur? Atque expedita iure mollitia quaerat vitae. Adipisci aliquid debitis dolore enim eos officia, perspiciatis quibusdam!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Accusamus consectetur deleniti doloribus eligendi enim nesciunt officia perspiciatis, quia ratione tempore. Aliquam aliquid autem earum eum explicabo iste labore maiores nisi non reiciendis repellat, similique soluta sunt suscipit ut!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "A ab ad aliquam atque, consequatur consequuntur corporis distinctio ea eaque eum, explicabo molestias nobis perferendis possimus ut vero voluptatum? Aspernatur dolorem molestias numquam quasi, quos repudiandae similique temporibus ullam."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Dolor dolore doloremque eaque eum excepturi explicabo illo illum incidunt itaque minima molestias natus quae quaerat quasi quidem recusandae, reiciendis sapiente tempore voluptas, voluptatem. Aliquid consectetur debitis eius quisquam ut!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Aliquid cupiditate dolor, eaque, eius ex harum inventore iste laboriosam, laborum odio placeat porro possimus praesentium recusandae saepe unde veritatis voluptate! Atque cupiditate in inventore ipsam magnam porro possimus suscipit."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Aut blanditiis deleniti ducimus ea eaque eius et inventore iusto labore laudantium modi neque, nesciunt nobis quas quo reiciendis repudiandae, rerum sapiente sit voluptas! Ducimus ea expedita provident quos sit."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Asperiores eum hic id iusto libero molestias non, omnis quia recusandae reprehenderit sequi soluta tempore. Cum dicta est, expedita itaque iusto minus mollitia, possimus rerum similique sint, sunt tempore ut!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Accusamus accusantium, aliquid eius eveniet fugit laudantium maxime necessitatibus, nisi numquam, placeat provident repellendus rerum tempora totam ullam. Alias cupiditate earum error eveniet id illo mollitia quisquam voluptas. Pariatur, suscipit?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Accusamus accusantium aliquam aliquid aperiam consectetur debitis dignissimos error esse eum id iure laudantium maxime necessitatibus nesciunt non odit perspiciatis possimus praesentium quo ratione, recusandae repellendus, tenetur ut vel velit."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Accusamus aliquam at atque consequuntur, corporis cumque debitis doloremque dolorum ducimus ea earum error ex illo, ipsa ipsum odio pariatur ratione reiciendis reprehenderit sapiente similique sit tempore velit voluptas voluptatem!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Consectetur, culpa dignissimos ducimus eius eligendi enim, et facere fuga nemo nisi nobis odio omnis quisquam quo rem temporibus totam? A commodi esse fuga id incidunt iusto maiores quibusdam sint!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Accusamus ad alias architecto aspernatur commodi consectetur, doloremque ipsum magnam maiores modi omnis optio quia temporibus. Dolores doloribus ea, et explicabo inventore ipsam porro qui rerum, sit soluta tempore velit."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Assumenda expedita quaerat vero. Aliquam animi aspernatur assumenda at beatae blanditiis, delectus dolores ducimus facere id illum incidunt labore laboriosam natus porro quibusdam quidem quisquam similique sit soluta voluptate voluptatem!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Dolorem eum rem velit. Asperiores, consectetur deleniti ea nulla quam sint tempore temporibus totam velit voluptates! A aspernatur consequuntur deleniti enim explicabo, facere, impedit libero magnam molestiae necessitatibus quod ratione?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Alias amet consectetur deleniti dicta illum in quasi quidem ullam! Accusamus aliquam aperiam, corporis debitis, dolor eaque eius iusto necessitatibus nisi perspiciatis quod repellendus sed tenetur ullam veniam? Illum, nam."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Ab accusamus aliquam assumenda atque autem debitis distinctio eos ex impedit in laudantium magni minus molestiae odit officia omnis optio, perferendis placeat quis reiciendis repellat reprehenderit sapiente temporibus tenetur voluptatibus?"));
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-9"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "btn-group main-page-auth",
+        role: "group",
+        "aria-label": "Basic example"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "auth-buttons"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-secondary",
+        onClick: this.handleClick
+      }, "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u044F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-secondary",
+        onClick: this.handleClick
+      }, "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "auth-forms"
+      }, this.state.prop ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Registration__WEBPACK_IMPORTED_MODULE_1__["default"], null) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Authorization__WEBPACK_IMPORTED_MODULE_5__["default"], null))))));
     }
   }]);
 
@@ -66800,7 +66992,7 @@ function (_Component) {
         className: "post-author"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: '/author/' + this.props.post.author_id
-      }, this.props.authors[this.props.post.author_id].name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, this.props.authors[this.props.post.author_id - 1].name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://sun9-55.userapi.com/c836435/v836435967/2c962/ZjNR1MUQ3MU.jpg",
         alt: "",
         className: "rounded-circle"
@@ -66990,8 +67182,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Posts_Post_Post__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Posts/Post/Post */ "./resources/js/components/Posts/Post/Post.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -67009,7 +67200,6 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -67096,7 +67286,7 @@ function (_Component) {
           key: post.id
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
           className: "profile-posts-titles"
-        }, post.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        }, post.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
           to: '/fullpost/' + post.id
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "btn profile-posts-button btn-outline-secondary"
