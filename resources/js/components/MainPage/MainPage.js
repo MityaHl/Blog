@@ -37,7 +37,9 @@ class MainPage extends Component{
                             </div>
                             <div className="auth-forms">
                                 {
+
                                     this.state.prop ? <Registration/> : <Authorization/>
+
                                 }
                             </div>
                         </div>

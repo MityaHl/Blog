@@ -67340,8 +67340,8 @@ function (_Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/vagrant/code/PhpstormProjects/blog-project/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/vagrant/code/PhpstormProjects/blog-project/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\User\Downloads\OSPanel\domains\Blog\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\User\Downloads\OSPanel\domains\Blog\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
