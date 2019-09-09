@@ -6,6 +6,7 @@ import Authorization from "../Auth/Authorization";
 import Categories from "../Categories/Categories";
 import Profile from "../Profile/Profile";
 import FullPost from "../Posts/FullPost";
+import SayHi from "./SayHi";
 class MainPage extends Component{
 
     constructor(props) {
@@ -26,22 +27,16 @@ class MainPage extends Component{
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-3 snoop">
                         <img src="https://i.gifer.com/6os.gif" alt=""/>
                     </div>
                     <div className="col-md-9">
-                        <div className="btn-group main-page-auth" role="group" aria-label="Basic example">
-                            <div className="auth-buttons">
-                                <button type="button" className="btn btn-secondary" onClick={this.handleClick}>Авторизация</button>
-                                <button type="button" className="btn btn-secondary" onClick={this.handleClick}>Регистрация</button>
-                            </div>
-                            <div className="auth-forms">
-                                {
-
-                                    this.state.prop ? <Registration/> : <Authorization/>
-
-                                }
-                            </div>
+                        <div className="auth-forms">
+                            {
+                                this.props.isAuth ? (<SayHi/>) : (
+                                    !this.props.auth ? <Registration/> : <Authorization/>
+                                )
+                            }
                         </div>
                     </div>
                 </div>

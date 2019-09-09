@@ -66155,9 +66155,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -66177,22 +66177,49 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var App =
 /*#__PURE__*/
-function (_Component) {
-  _inherits(App, _Component);
+function (_PureComponent) {
+  _inherits(App, _PureComponent);
 
-  function App() {
+  function App(props) {
+    var _this;
+
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(App).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
+    _this.state = {
+      isAuth: false,
+      auth: false
+    };
+    _this.onButtonClick = _this.onButtonClick.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(App, [{
+    key: "onButtonClick",
+    value: function onButtonClick() {
+      this.setState({
+        auth: !this.state.auth
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+      var _this2 = this;
+
+      var func = this.onButtonClick;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        isAuth: this.state.isAuth,
+        auth: this.state.auth,
+        onButtonClick: func
+      }), this.state.isAuth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
         path: '/',
         exact: true,
-        component: _MainPage_MainPage__WEBPACK_IMPORTED_MODULE_3__["default"]
+        render: function render() {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MainPage_MainPage__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            isAuth: _this2.state.isAuth,
+            auth: _this2.state.auth
+          });
+        }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
         path: '/posts',
         component: _Posts_Posts__WEBPACK_IMPORTED_MODULE_4__["default"]
@@ -66214,12 +66241,21 @@ function (_Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
         path: '/author/:id',
         component: _Profile_Profile__WEBPACK_IMPORTED_MODULE_6__["default"]
-      })));
+      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+        path: '/',
+        exact: true,
+        render: function render() {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MainPage_MainPage__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            isAuth: _this2.state.isAuth,
+            auth: _this2.state.auth
+          });
+        }
+      })), "}");
     }
   }]);
 
   return App;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_0__["PureComponent"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
 
@@ -66270,7 +66306,29 @@ function (_Component) {
   _createClass(Authorization, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "!!!!!!!!!!!!!!!!!!!");
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "exampleInputEmail1"
+      }, "Email \u0430\u0434\u0440\u0435\u0441"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "email",
+        className: "form-control",
+        id: "exampleInputEmail1",
+        "aria-describedby": "emailHelp",
+        placeholder: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 email"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "exampleInputPassword1"
+      }, "\u041F\u0430\u0440\u043E\u043B\u044C"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "password",
+        className: "form-control",
+        id: "exampleInputPassword1",
+        placeholder: "\u041F\u0430\u0440\u043E\u043B\u044C"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "submit",
+        className: "btn btn-outline-secondary"
+      }, "\u0412\u043E\u0439\u0442\u0438")));
     }
   }]);
 
@@ -66341,6 +66399,15 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "exampleInputPassword1"
       }, "\u041F\u0430\u0440\u043E\u043B\u044C"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "password",
+        className: "form-control",
+        id: "exampleInputPassword1",
+        placeholder: "\u041F\u0430\u0440\u043E\u043B\u044C"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "exampleInputPassword1"
+      }, "\u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0435 \u043F\u0430\u0440\u043E\u043B\u044C"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
         className: "form-control",
         id: "exampleInputPassword1",
@@ -66654,25 +66721,31 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var Header =
 /*#__PURE__*/
-function (_Component) {
-  _inherits(Header, _Component);
+function (_PureComponent) {
+  _inherits(Header, _PureComponent);
 
-  function Header() {
+  function Header(props) {
+    var _this;
+
     _classCallCheck(this, Header);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Header).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Header).call(this, props));
+    _this.state = {};
+    return _this;
   }
 
   _createClass(Header, [{
     key: "render",
     value: function render() {
+      var func = this.props.onButtonClick;
+      console.log(func);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "jumbotron full-head"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container header "
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "name"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "\u0411\u043B\u043E\u0433")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "\u0411\u043B\u043E\u0433")), this.props.isAuth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "menu list-inline"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "list-inline-item"
@@ -66698,12 +66771,22 @@ function (_Component) {
         to: '/profile'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "btn"
-      }, " \u041F\u0440\u043E\u0444\u0438\u043B\u044C "))))));
+      }, " \u041F\u0440\u043E\u0444\u0438\u043B\u044C ")))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "btn-group main-page-auth",
+        role: "group",
+        "aria-label": "Basic example"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "auth-buttons"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-secondary",
+        onClick: func
+      }, this.props.auth ? 'Регистрация' : 'Авторизация')))));
     }
   }]);
 
   return Header;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_0__["PureComponent"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
 
@@ -66728,6 +66811,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Categories_Categories__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Categories/Categories */ "./resources/js/components/Categories/Categories.js");
 /* harmony import */ var _Profile_Profile__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Profile/Profile */ "./resources/js/components/Profile/Profile.js");
 /* harmony import */ var _Posts_FullPost__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Posts/FullPost */ "./resources/js/components/Posts/FullPost.js");
+/* harmony import */ var _SayHi__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./SayHi */ "./resources/js/components/MainPage/SayHi.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66745,6 +66829,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -66789,29 +66874,15 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3"
+        className: "col-md-3 snoop"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://i.gifer.com/6os.gif",
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-md-9"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "btn-group main-page-auth",
-        role: "group",
-        "aria-label": "Basic example"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "auth-buttons"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button",
-        className: "btn btn-secondary",
-        onClick: this.handleClick
-      }, "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u044F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button",
-        className: "btn btn-secondary",
-        onClick: this.handleClick
-      }, "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "auth-forms"
-      }, this.state.prop ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Registration__WEBPACK_IMPORTED_MODULE_1__["default"], null) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Authorization__WEBPACK_IMPORTED_MODULE_5__["default"], null))))));
+      }, this.props.isAuth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SayHi__WEBPACK_IMPORTED_MODULE_9__["default"], null) : !this.props.auth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Registration__WEBPACK_IMPORTED_MODULE_1__["default"], null) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Authorization__WEBPACK_IMPORTED_MODULE_5__["default"], null)))));
     }
   }]);
 
@@ -66819,6 +66890,62 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (MainPage);
+
+/***/ }),
+
+/***/ "./resources/js/components/MainPage/SayHi.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/MainPage/SayHi.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var SayHi =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(SayHi, _Component);
+
+  function SayHi() {
+    _classCallCheck(this, SayHi);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(SayHi).apply(this, arguments));
+  }
+
+  _createClass(SayHi, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "\u041F\u043E\u0437\u0434\u0440\u0430\u0432\u043B\u044F\u0435\u043C \u0412\u0430\u0441!", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "\u0412\u044B \u043F\u043E\u043F\u0430\u043B\u0438 \u043D\u0430 \u0441\u0430\u043C\u044B\u0439 \u043F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u044B\u0439 \u043F\u043E\u0441\u043B\u0435 \u0444\u0435\u0439\u0441\u0431\u0443\u043A\u0430 \u0438 \u0435\u0449\u0435 \u043C\u0438\u043B\u043B\u0438\u0430\u0440\u0434\u0430 \u0441\u0435\u0440\u0432\u0438\u0441\u043E\u0432 \u0441\u0430\u0439\u0442."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Congratulations!!!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "\u0412 \u0434\u0430\u043D\u043D\u043E\u043C \u0431\u043B\u043E\u0433\u0435 \u0432\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F \u0441\u0432\u043E\u0438\u043C\u0438 \u0437\u043D\u0430\u043D\u0438\u044F\u043C\u0438 \u0441 \u0434\u0440\u0443\u0433\u0438\u043C\u0438, \u0430 \u0442\u0430\u043A \u0436\u0435 \u0447\u0435\u0440\u043F\u0430\u0442\u044C \u0438\u0445 \u043E\u0442 \u0434\u0440\u0443\u0433\u0438\u0445 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u0439."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "\u041A\u0441\u0442\u0430\u0442\u0438 \u0433\u0438\u0444\u043A\u0430 \u043D\u0438\u0447\u0435\u0433\u043E \u0442\u0430\u043A\u0430\u044F, \u043F\u0440\u0430\u0432\u0434\u0430?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0412\u0441\u0435 \u043F\u0440\u0430\u0432\u0430 \u0437\u0430\u0449\u0438\u0449\u0435\u043D\u044B."));
+    }
+  }]);
+
+  return SayHi;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (SayHi);
 
 /***/ }),
 
@@ -67309,7 +67436,9 @@ function (_Component) {
         className: "rounded"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user-name"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Mitya Khlopyanikov"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Mitya Khlopyanikov")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn btn-outline-secondary"
+      }, "\u0420\u0435\u0434\u0430\u043A\u0442\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u043F\u0440\u043E\u0444\u0438\u043B\u044C")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user-posts col-md-8"
       }, posts instanceof Array && this.state.count ? this.showPosts() : this.showNothing())));
     }

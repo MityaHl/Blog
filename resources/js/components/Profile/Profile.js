@@ -87,6 +87,7 @@ class Profile extends Component{
                         <div className="user-name">
                             <h4>Mitya Khlopyanikov</h4>
                         </div>
+                       <button className="btn btn-outline-secondary">Редактировать профиль</button>
                    </div>
                    <div className="user-posts col-md-8">
                        {

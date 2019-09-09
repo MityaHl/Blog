@@ -1,9 +1,15 @@
 .main-page-auth {
-  display: flex;
+  display: flex!important;
   justify-content: center;
   align-items: center;
 }
 
 .auth-buttons {
-  width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    button {
+        margin-left: 10px;
+    }
+    margin-bottom: 20px;
 }

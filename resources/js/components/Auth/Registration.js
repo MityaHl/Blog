@@ -14,6 +14,10 @@ class Registration extends Component {
                         <label htmlFor="exampleInputPassword1">Пароль</label>
                         <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Пароль"/>
                     </div>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputPassword1">Повторите пароль</label>
+                        <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Пароль"/>
+                    </div>
                     <button type="submit" className="btn btn-outline-secondary">Зарегестрироваться</button>
                 </form>
             </div>
