@@ -24,6 +24,7 @@ class MainPage extends Component{
     }
 
     render() {
+        console.log(this.props);
         return (
             <div className="container">
                 <div className="row">
@@ -34,7 +35,9 @@ class MainPage extends Component{
                         <div className="auth-forms">
                             {
                                 this.props.isAuth ? (<SayHi/>) : (
-                                    !this.props.auth ? <Registration/> : <Authorization/>
+                                    !this.props.auth ? <Registration onButtonClick={
+                                        this.props.onButtonClick
+                                    }/> : <Authorization/>
                                 )
                             }
                         </div>

@@ -10696,7 +10696,7 @@ a.text-dark:focus {
 }
 
 .header {
-  display: block;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
 }
@@ -10747,15 +10747,15 @@ body {
 
 .main-page-auth {
   display: flex !important;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  width: 100%;
 }
 
 .auth-buttons {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 20px;
 }
 
 .auth-buttons button {

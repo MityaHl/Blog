@@ -1,7 +1,8 @@
 .main-page-auth {
   display: flex!important;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+    width: 100%;
 }
 
 .auth-buttons {
@@ -11,5 +12,4 @@
     button {
         margin-left: 10px;
     }
-    margin-bottom: 20px;
 }

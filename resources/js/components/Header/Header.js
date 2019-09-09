@@ -10,7 +10,6 @@ class Header extends PureComponent{
 
     render() {
         const func = this.props.onButtonClick;
-        console.log(func);
         return (
             <div className="jumbotron full-head">
                 <div className="container header ">

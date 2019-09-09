@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc26fb22-97b9-4ca1-8dea-20708d48ace9" name="Default Changelist" comment="add auth wie">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/MainPage/SayHi.js" afterDir="false" />
+    <list default="true" id="bc26fb22-97b9-4ca1-8dea-20708d48ace9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Auth/Authorization.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Auth/Authorization.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Auth/Registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Auth/Registration.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/MainPage/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/Header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/MainPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/MainPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,8 +210,17 @@
       <workItem from="1567763239317" duration="283000" />
       <workItem from="1567843996001" duration="18346000" />
       <workItem from="1567928113055" duration="6908000" />
-      <workItem from="1568011839718" duration="384000" />
+      <workItem from="1568011839718" duration="3673000" />
+      <workItem from="1568040420962" duration="7259000" />
     </task>
+    <task id="LOCAL-00001" summary="add auth view to main page">
+      <created>1568012340425</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568012340425</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,5 +238,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add auth view to main page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add auth view to main page" />
   </component>
 </project>

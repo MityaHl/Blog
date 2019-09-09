@@ -42,7 +42,9 @@ class App extends PureComponent{
                     {
                         this.state.isAuth ? (
                             <Switch>
-                                <Route path={'/'} exact render={()=><MainPage isAuth={this.state.isAuth} auth={this.state.auth}/>} />
+                                <Route path={'/'} exact render={()=><MainPage isAuth={this.state.isAuth} auth={this.state.auth} onButtonClick={
+                                    func
+                                }/>} />
                                 <Route path={'/posts'} component={ Posts } />
                                 <Route path={'/auth'} component={ Authorization } />
                                 <Route path={'/categories'} component={ Categories } />

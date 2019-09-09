@@ -66188,6 +66188,8 @@ function (_PureComponent) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
     _this.state = {
       isAuth: false,
+      login: '',
+      password: '',
       auth: false
     };
     _this.onButtonClick = _this.onButtonClick.bind(_assertThisInitialized(_this));
@@ -66217,7 +66219,8 @@ function (_PureComponent) {
         render: function render() {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MainPage_MainPage__WEBPACK_IMPORTED_MODULE_3__["default"], {
             isAuth: _this2.state.isAuth,
-            auth: _this2.state.auth
+            auth: _this2.state.auth,
+            onButtonClick: func
           });
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
@@ -66350,6 +66353,8 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66360,13 +66365,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -66375,25 +66381,92 @@ var Registration =
 function (_Component) {
   _inherits(Registration, _Component);
 
-  function Registration() {
+  function Registration(props) {
+    var _this;
+
     _classCallCheck(this, Registration);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Registration).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Registration).call(this, props));
+    _this.state = {
+      email: '',
+      name: '',
+      password: '',
+      password_confirmation: ''
+    };
+    _this.handleEmailChange = _this.handleEmailChange.bind(_assertThisInitialized(_this));
+    _this.handleNameChange = _this.handleNameChange.bind(_assertThisInitialized(_this));
+    _this.handlePasswordChange = _this.handlePasswordChange.bind(_assertThisInitialized(_this));
+    _this.handlePassConfirmChange = _this.handlePassConfirmChange.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Registration, [{
+    key: "handlePasswordChange",
+    value: function handlePasswordChange(e) {
+      this.setState({
+        password: e.target.value
+      });
+    }
+  }, {
+    key: "handleNameChange",
+    value: function handleNameChange(e) {
+      this.setState({
+        name: e.target.value
+      });
+    }
+  }, {
+    key: "handleEmailChange",
+    value: function handleEmailChange(e) {
+      this.setState({
+        email: e.target.value
+      });
+    }
+  }, {
+    key: "handlePassConfirmChange",
+    value: function handlePassConfirmChange(e) {
+      this.setState({
+        password_confirmation: e.target.value
+      });
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      var data = {};
+      data.password = this.state.password;
+      data.name = this.state.name;
+      data.email = this.state.email;
+      data.password_confirmation = this.state.password_confirmation;
+      console.log(data);
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/register', data);
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      console.log(this.props);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "exampleInputEmail1"
       }, "Email \u0430\u0434\u0440\u0435\u0441"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "email",
         className: "form-control",
-        id: "exampleInputEmail1",
-        "aria-describedby": "emailHelp",
+        value: this.state.email,
+        onChange: this.handleEmailChange,
         placeholder: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 email"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "exampleInputPassword1"
+      }, "\u0418\u043C\u044F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        className: "form-control",
+        value: this.state.name,
+        onChange: this.handleNameChange,
+        placeholder: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0438\u043C\u044F"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -66401,16 +66474,18 @@ function (_Component) {
       }, "\u041F\u0430\u0440\u043E\u043B\u044C"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
         className: "form-control",
-        id: "exampleInputPassword1",
+        value: this.state.password,
+        onChange: this.handlePasswordChange,
         placeholder: "\u041F\u0430\u0440\u043E\u043B\u044C"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "exampleInputPassword1"
-      }, "\u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0435 \u043F\u0430\u0440\u043E\u043B\u044C"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "\u041F\u0430\u0440\u043E\u043B\u044C"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
         className: "form-control",
-        id: "exampleInputPassword1",
+        value: this.state.password_confirmation,
+        onChange: this.handlePassConfirmChange,
         placeholder: "\u041F\u0430\u0440\u043E\u043B\u044C"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
@@ -66738,7 +66813,6 @@ function (_PureComponent) {
     key: "render",
     value: function render() {
       var func = this.props.onButtonClick;
-      console.log(func);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "jumbotron full-head"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -66869,6 +66943,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      console.log(this.props);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -66882,7 +66957,9 @@ function (_Component) {
         className: "col-md-9"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "auth-forms"
-      }, this.props.isAuth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SayHi__WEBPACK_IMPORTED_MODULE_9__["default"], null) : !this.props.auth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Registration__WEBPACK_IMPORTED_MODULE_1__["default"], null) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Authorization__WEBPACK_IMPORTED_MODULE_5__["default"], null)))));
+      }, this.props.isAuth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SayHi__WEBPACK_IMPORTED_MODULE_9__["default"], null) : !this.props.auth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Registration__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        onButtonClick: this.props.onButtonClick
+      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Authorization__WEBPACK_IMPORTED_MODULE_5__["default"], null)))));
     }
   }]);
 
