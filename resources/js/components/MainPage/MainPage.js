@@ -24,7 +24,9 @@ class MainPage extends Component{
     }
 
     render() {
-        console.log(this.props);
+        console.log(this.props.changeIsAuth);
+        const func = this.props.changeIsAuth;
+        console.log('mainpage', func);
         return (
             <div className="container">
                 <div className="row">
@@ -37,7 +39,7 @@ class MainPage extends Component{
                                 this.props.isAuth ? (<SayHi/>) : (
                                     !this.props.auth ? <Registration onButtonClick={
                                         this.props.onButtonClick
-                                    }/> : <Authorization/>
+                                    }/> : <Authorization changeAuth={func}/>
                                 )
                             }
                         </div>

@@ -10,16 +10,22 @@ import Authorization from './Auth/Authorization'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Categories from "./Categories/Categories";
 
-
 class App extends PureComponent{
 
     constructor(props) {
         super(props);
         this.state = {
-            isAuth: false,
-            auth: false
+            isAuth: true,
+            auth: true
         };
         this.onButtonClick = this.onButtonClick.bind(this);
+        this.changeIsAuth = this.changeIsAuth.bind(this);
+    }
+
+    changeIsAuth () {
+        this.setState({
+            isAuth: !this.state.isAuth
+        })
     }
 
     onButtonClick() {
@@ -30,6 +36,8 @@ class App extends PureComponent{
 
     render() {
         const func = this.onButtonClick;
+        const funcIsAuth = this.changeIsAuth;
+        console.log(funcIsAuth);
         return (
                 <BrowserRouter>
                     <Header
@@ -42,7 +50,7 @@ class App extends PureComponent{
                     {
                         this.state.isAuth ? (
                             <Switch>
-                                <Route path={'/'} exact render={()=><MainPage isAuth={this.state.isAuth} auth={this.state.auth} onButtonClick={
+                                <Route path={'/'} exact render={()=><MainPage changeIsAuth={this.changeIsAuth} isAuth={this.state.isAuth} auth={this.state.auth} onButtonClick={
                                     func
                                 }/>} />
                                 <Route path={'/posts'} component={ Posts } />
@@ -55,7 +63,7 @@ class App extends PureComponent{
                             </Switch>
                         ) : (
                             <Switch>
-                                <Route path={'/'} exact render={()=><MainPage isAuth={this.state.isAuth} auth={this.state.auth}/>} />
+                                <Route path={'/'} exact render={()=><MainPage changeIsAuth={funcIsAuth} isAuth={this.state.isAuth} auth={this.state.auth}/>} />
                             </Switch>
                         )
                     }

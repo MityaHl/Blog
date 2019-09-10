@@ -6,10 +6,11 @@ class Profile extends Component{
 
     constructor(props) {
         super(props);
-        this.state = {posts: '', count: '', user: ''};
+        this.state = {posts: '', count: '', user: '', isEdithProfile: false};
         this.promiseRequests = this.promiseRequests.bind(this);
         this.showPosts = this.showPosts.bind(this);
         this.showNothing = this.showNothing.bind(this);
+        this.editProfile = this.editProfile.bind(this);
     }
 
 
@@ -35,6 +36,12 @@ class Profile extends Component{
                     });
                     if(countQuery == 2) resolve();
                 });
+        })
+    }
+
+    editProfile() {
+        this.setState({
+            isEdithProfile: !isEdithProfile
         })
     }
 
@@ -81,13 +88,13 @@ class Profile extends Component{
         return (
            <div className="container">
                <div className="row">
-                   <div className="user-info col-md-4">
+                   <div className="user-info col-md-4 text-center">
                        <img src="https://sun9-55.userapi.com/c836435/v836435967/2c962/ZjNR1MUQ3MU.jpg" alt=""
                             className="rounded"/>
                         <div className="user-name">
                             <h4>Mitya Khlopyanikov</h4>
                         </div>
-                       <button className="btn btn-outline-secondary">Редактировать профиль</button>
+                       <button className="btn btn-outline-secondary" onClick={this.editProfile}>Редактировать профиль</button>
                    </div>
                    <div className="user-posts col-md-8">
                        {

@@ -18,6 +18,20 @@
   z-index: 10;
 }
 
+.menu-btn {
+    width: 100px;
+    margin-right: 5px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
 .list-inline-item {
   height: 56px;
+    display: flex;
+    align-items: center;
 }

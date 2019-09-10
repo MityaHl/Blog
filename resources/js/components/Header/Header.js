@@ -19,28 +19,18 @@ class Header extends PureComponent{
                     {
                         this.props.isAuth ? (
                             <div className="menu list-inline">
-                                <div className="list-inline-item">
                                     <Link to={'/'}>
-                                        <button className="btn"> Главная </button>
+                                        <button className="btn btn-outline-secondary menu-btn"> Главная </button>
                                     </Link>
-                                </div>
-                                <div className="list-inline-item">
                                     <Link to={'/posts'}>
-                                        <button className="btn"> Посты </button>
+                                        <button className="btn btn-outline-secondary menu-btn"> Посты </button>
                                     </Link>
-                                </div>
-
-                                <div className="list-inline-item">
                                     <Link to={'/categories'}>
-                                        <button className="btn"> Категории </button>
+                                        <button className="btn btn-outline-secondary menu-btn"> Категории </button>
                                     </Link>
-                                </div>
-
-                                <div className="list-inline-item">
                                     <Link to={'/profile'}>
-                                        <button className="btn"> Профиль </button>
+                                        <button className="btn btn-outline-secondary menu-btn"> Профиль </button>
                                     </Link>
-                                </div>
                             </div>
                         ) : (
                             <div className="btn-group main-page-auth" role="group" aria-label="Basic example">

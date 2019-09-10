@@ -89,8 +89,11 @@ class Categories extends Component {
             <div className="category_select">
                 <select className="form-control" onChange={this.selectCategory}>
                     <option selected value="0">Все категории</option>
-                    <option value="1">Авто</option>
-                    <option value="2">Еда</option>
+                    {
+                        categories.map((category, index) => (
+                            <option value={category.id}>{category.title}</option>
+                        ))
+                    }
                 </select>
                 {this.showCategory(posts, authors, categories)}
             </div>

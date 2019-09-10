@@ -66187,16 +66187,22 @@ function (_PureComponent) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
     _this.state = {
-      isAuth: false,
-      login: '',
-      password: '',
-      auth: false
+      isAuth: true,
+      auth: true
     };
     _this.onButtonClick = _this.onButtonClick.bind(_assertThisInitialized(_this));
+    _this.changeIsAuth = _this.changeIsAuth.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(App, [{
+    key: "changeIsAuth",
+    value: function changeIsAuth() {
+      this.setState({
+        isAuth: !this.state.isAuth
+      });
+    }
+  }, {
     key: "onButtonClick",
     value: function onButtonClick() {
       this.setState({
@@ -66209,6 +66215,8 @@ function (_PureComponent) {
       var _this2 = this;
 
       var func = this.onButtonClick;
+      var funcIsAuth = this.changeIsAuth;
+      console.log(funcIsAuth);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
         isAuth: this.state.isAuth,
         auth: this.state.auth,
@@ -66218,6 +66226,7 @@ function (_PureComponent) {
         exact: true,
         render: function render() {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MainPage_MainPage__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            changeIsAuth: _this2.changeIsAuth,
             isAuth: _this2.state.isAuth,
             auth: _this2.state.auth,
             onButtonClick: func
@@ -66249,6 +66258,7 @@ function (_PureComponent) {
         exact: true,
         render: function render() {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MainPage_MainPage__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            changeIsAuth: funcIsAuth,
             isAuth: _this2.state.isAuth,
             auth: _this2.state.auth
           });
@@ -66275,6 +66285,8 @@ function (_PureComponent) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66285,13 +66297,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -66300,16 +66313,69 @@ var Authorization =
 function (_Component) {
   _inherits(Authorization, _Component);
 
-  function Authorization() {
+  function Authorization(props) {
+    var _this;
+
     _classCallCheck(this, Authorization);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Authorization).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Authorization).call(this, props));
+    _this.state = {
+      email: '',
+      password: ''
+    };
+    _this.handleEmailChange = _this.handleEmailChange.bind(_assertThisInitialized(_this));
+    _this.handlePasswordChange = _this.handlePasswordChange.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Authorization, [{
+    key: "handlePasswordChange",
+    value: function handlePasswordChange(e) {
+      this.setState({
+        password: e.target.value
+      });
+    }
+  }, {
+    key: "handleNameChange",
+    value: function handleNameChange(e) {
+      this.setState({
+        name: e.target.value
+      });
+    }
+  }, {
+    key: "handleEmailChange",
+    value: function handleEmailChange(e) {
+      this.setState({
+        email: e.target.value
+      });
+    }
+  }, {
+    key: "handlePassConfirmChange",
+    value: function handlePassConfirmChange(e) {
+      this.setState({
+        password_confirmation: e.target.value
+      });
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      var data = {};
+      data.password = this.state.password;
+      data.email = this.state.email;
+      console.log(data);
+      var func = this.props.changeAuth;
+      console.log("auth", func);
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/login', data).then();
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      //console.log(this.props.changeIsAuth);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "exampleInputEmail1"
@@ -66317,7 +66383,7 @@ function (_Component) {
         type: "email",
         className: "form-control",
         id: "exampleInputEmail1",
-        "aria-describedby": "emailHelp",
+        onChange: this.handleEmailChange,
         placeholder: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 email"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
@@ -66327,6 +66393,7 @@ function (_Component) {
         type: "password",
         className: "form-control",
         id: "exampleInputPassword1",
+        onChange: this.handlePasswordChange,
         placeholder: "\u041F\u0430\u0440\u043E\u043B\u044C"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
@@ -66651,11 +66718,11 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         selected: true,
         value: "0"
-      }, "\u0412\u0441\u0435 \u043A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u0438"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "1"
-      }, "\u0410\u0432\u0442\u043E"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "2"
-      }, "\u0415\u0434\u0430")), this.showCategory(posts, authors, categories));
+      }, "\u0412\u0441\u0435 \u043A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u0438"), categories.map(function (category, index) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          value: category.id
+        }, category.title);
+      })), this.showCategory(posts, authors, categories));
     }
   }, {
     key: "showNothing",
@@ -66821,31 +66888,23 @@ function (_PureComponent) {
         className: "name"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "\u0411\u043B\u043E\u0433")), this.props.isAuth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "menu list-inline"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "list-inline-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: '/'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn"
-      }, " \u0413\u043B\u0430\u0432\u043D\u0430\u044F "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "list-inline-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "btn btn-outline-secondary menu-btn"
+      }, " \u0413\u043B\u0430\u0432\u043D\u0430\u044F ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: '/posts'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn"
-      }, " \u041F\u043E\u0441\u0442\u044B "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "list-inline-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "btn btn-outline-secondary menu-btn"
+      }, " \u041F\u043E\u0441\u0442\u044B ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: '/categories'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn"
-      }, " \u041A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u0438 "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "list-inline-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "btn btn-outline-secondary menu-btn"
+      }, " \u041A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u0438 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: '/profile'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn"
-      }, " \u041F\u0440\u043E\u0444\u0438\u043B\u044C ")))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "btn btn-outline-secondary menu-btn"
+      }, " \u041F\u0440\u043E\u0444\u0438\u043B\u044C "))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "btn-group main-page-auth",
         role: "group",
         "aria-label": "Basic example"
@@ -66943,7 +67002,9 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props);
+      console.log(this.props.changeIsAuth);
+      var func = this.props.changeIsAuth;
+      console.log('mainpage', func);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -66959,7 +67020,9 @@ function (_Component) {
         className: "auth-forms"
       }, this.props.isAuth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SayHi__WEBPACK_IMPORTED_MODULE_9__["default"], null) : !this.props.auth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Registration__WEBPACK_IMPORTED_MODULE_1__["default"], {
         onButtonClick: this.props.onButtonClick
-      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Authorization__WEBPACK_IMPORTED_MODULE_5__["default"], null)))));
+      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Authorization__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        changeAuth: func
+      })))));
     }
   }]);
 
@@ -67423,11 +67486,13 @@ function (_Component) {
     _this.state = {
       posts: '',
       count: '',
-      user: ''
+      user: '',
+      isEdithProfile: false
     };
     _this.promiseRequests = _this.promiseRequests.bind(_assertThisInitialized(_this));
     _this.showPosts = _this.showPosts.bind(_assertThisInitialized(_this));
     _this.showNothing = _this.showNothing.bind(_assertThisInitialized(_this));
+    _this.editProfile = _this.editProfile.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -67457,6 +67522,13 @@ function (_Component) {
 
           if (countQuery == 2) resolve();
         });
+      });
+    }
+  }, {
+    key: "editProfile",
+    value: function editProfile() {
+      this.setState({
+        isEdithProfile: !isEdithProfile
       });
     }
   }, {
@@ -67506,7 +67578,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "user-info col-md-4"
+        className: "user-info col-md-4 text-center"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://sun9-55.userapi.com/c836435/v836435967/2c962/ZjNR1MUQ3MU.jpg",
         alt: "",
@@ -67514,7 +67586,8 @@ function (_Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user-name"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Mitya Khlopyanikov")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-outline-secondary"
+        className: "btn btn-outline-secondary",
+        onClick: this.editProfile
       }, "\u0420\u0435\u0434\u0430\u043A\u0442\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u043F\u0440\u043E\u0444\u0438\u043B\u044C")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user-posts col-md-8"
       }, posts instanceof Array && this.state.count ? this.showPosts() : this.showNothing())));
