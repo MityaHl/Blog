@@ -17,8 +17,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware('api')->resource('/posts', 'PostController');
-Route::middleware('api')->resource('/users', 'UserController');
-Route::middleware('api')->resource('/categories', 'CategoryController');
 
 

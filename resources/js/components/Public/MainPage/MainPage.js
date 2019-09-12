@@ -36,12 +36,16 @@ class MainPage extends Component{
                     <div className="col-md-9">
                         <div className="auth-forms">
                             {
-                                this.props.isAuth ? (<SayHi/>) : (
-                                    !this.props.auth ? <Registration onButtonClick={
-                                        this.props.onButtonClick
-                                    }/> : <Authorization changeAuth={func}/>
-                                )
+                              this.props.isAuth ? (<SayHi/>) : (
+                                !this.props.auth ? (<Registration onButtonClick={
+                                    this.props.onButtonClick}/>
+                                    ) :
+                                    (
+                                        <Authorization changeAuth={func}/>
+                                    )
+                              )
                             }
+
                         </div>
                     </div>
                 </div>

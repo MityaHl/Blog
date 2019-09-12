@@ -9,10 +9,10 @@ Error: File to import not found or unreadable: ~bootstrap/scss/bootstrap.
 7: // Bootstrap
 8: @import '~bootstrap/scss/bootstrap';
 9: 
-10: @import 'Posts';
-11: @import 'Header';
-12: @import 'Categories';
-13: @import 'Profile';
+10: @import '../js/components/Public/Posts/Posts';
+11: @import '../js/components/Public/Header/Header';
+12: @import '../js/components/Public/Categories/Categories';
+13: @import '../js/components/Public/Profile/Profile';
 
 Backtrace:
 app.scss:8
@@ -53,4 +53,4 @@ C:/Ruby26-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ~bootstrap/scss/bootstrap.\A         on line 8 of app.scss\A \A 3: \A 4: // Variables\A 5: @import 'variables';\A 6: \A 7: // Bootstrap\A 8: @import '~bootstrap/scss/bootstrap';\A 9: \A 10: @import 'Posts';\A 11: @import 'Header';\A 12: @import 'Categories';\A 13: @import 'Profile';"; }
+  content: "Error: File to import not found or unreadable: ~bootstrap/scss/bootstrap.\A         on line 8 of app.scss\A \A 3: \A 4: // Variables\A 5: @import 'variables';\A 6: \A 7: // Bootstrap\A 8: @import '~bootstrap/scss/bootstrap';\A 9: \A 10: @import '../js/components/Public/Posts/Posts';\A 11: @import '../js/components/Public/Header/Header';\A 12: @import '../js/components/Public/Categories/Categories';\A 13: @import '../js/components/Public/Profile/Profile';"; }

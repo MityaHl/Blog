@@ -1,25 +1,36 @@
 import React,  {PureComponent}  from 'react';
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
-import Header from './Header/Header';
-import MainPage from './MainPage/MainPage';
-import Posts from './Posts/Posts';
-import FullPost from './Posts/FullPost';
-import Profile from './Profile/Profile'
-import Registration from './Auth/Registration'
-import Authorization from './Auth/Authorization'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Categories from "./Categories/Categories";
+import Header from './Public/Header/Header';
+import MainPage from './Public/MainPage/MainPage';
+import Posts from './Public/Posts/Posts';
+import FullPost from './Public/Posts/FullPost';
+import Profile from './Public/Profile/Profile'
+import Registration from './Public/Auth/Registration'
+import Authorization from './Public/Auth/Authorization'
+import {BrowserRouter, Route, Redirect, Switch} from "react-router-dom";
+import Categories from "./Public/Categories/Categories";
+import Admin from './Admin/Admin';
 
 class App extends PureComponent{
 
     constructor(props) {
         super(props);
         this.state = {
-            isAuth: true,
+            isAuth: '',
             auth: true
         };
         this.onButtonClick = this.onButtonClick.bind(this);
         this.changeIsAuth = this.changeIsAuth.bind(this);
+    }
+
+    componentWillMount() {
+        axios.get('/user/isAuth')
+            .then(response => {
+                this.setState({
+                    isAuth : response.data
+                });
+            })
     }
 
     changeIsAuth () {
@@ -37,7 +48,7 @@ class App extends PureComponent{
     render() {
         const func = this.onButtonClick;
         const funcIsAuth = this.changeIsAuth;
-        console.log(funcIsAuth);
+        console.log(this.state.isAuth);
         return (
                 <BrowserRouter>
                     <Header
@@ -46,30 +57,33 @@ class App extends PureComponent{
                         onButtonClick={
                             func
                         }
+                        funcIsAuth = {
+                            funcIsAuth
+                        }
                     />
                     {
                         this.state.isAuth ? (
                             <Switch>
-                                <Route path={'/'} exact render={()=><MainPage changeIsAuth={this.changeIsAuth} isAuth={this.state.isAuth} auth={this.state.auth} onButtonClick={
-                                    func
-                                }/>} />
-                                <Route path={'/posts'} component={ Posts } />
-                                <Route path={'/auth'} component={ Authorization } />
-                                <Route path={'/categories'} component={ Categories } />
-                                <Route path={'/registration'} component={ Registration } />
-                                <Route path={'/profile'} component={ Profile } />
-                                <Route path={'/fullpost/:id'} component={ FullPost } />
-                                <Route path={'/author/:id'} component={ Profile } />
+                                <Route path={'/'} exact render={() => <MainPage changeIsAuth={this.changeIsAuth}
+                                                                                isAuth={this.state.isAuth}
+                                                                                auth={this.state.auth}
+                                                                                onButtonClick={func}/>}/>
+                                <Route path={'/posts'} component={Posts}/>
+                                <Route path={'/auth'} component={Authorization}/>
+                                <Route path={'/categories'} component={Categories}/>
+                                <Route path={'/registration'} component={Registration}/>
+                                <Route path={'/profile'} component={Profile}/>
+                                <Route path={'/fullpost/:id'} component={FullPost}/>
+                                <Route path={'/author/:id'} component={Profile}/>
                             </Switch>
                         ) : (
                             <Switch>
-                                <Route path={'/'} exact render={()=><MainPage changeIsAuth={funcIsAuth} isAuth={this.state.isAuth} auth={this.state.auth}/>} />
+                                <Route path={'/'} exact
+                                       render={() => <MainPage changeIsAuth={funcIsAuth} isAuth={this.state.isAuth}
+                                                               auth={this.state.auth}/>}/>
                             </Switch>
                         )
                     }
-
-                    }
-
                 </BrowserRouter>
         )
     }

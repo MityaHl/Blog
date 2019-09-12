@@ -48,8 +48,11 @@ class Authorization extends Component {
         console.log("auth", func);
         axios.post('/login', data)
             .then(
-
-            )
+                this.props.changeAuth,
+                response => {
+                    console.log(response);
+                }
+            );
     }
 
     render() {

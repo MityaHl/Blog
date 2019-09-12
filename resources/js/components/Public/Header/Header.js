@@ -5,7 +5,13 @@ class Header extends PureComponent{
     constructor(props) {
         super(props);
         this.state = {
-        }
+        };
+        this.logOut = this.logOut.bind(this);
+    }
+
+    logOut() {
+        axios.post('/logout');
+        this.props.funcIsAuth();
     }
 
     render() {
@@ -19,18 +25,20 @@ class Header extends PureComponent{
                     {
                         this.props.isAuth ? (
                             <div className="menu list-inline">
-                                    <Link to={'/'}>
-                                        <button className="btn btn-outline-secondary menu-btn"> Главная </button>
-                                    </Link>
-                                    <Link to={'/posts'}>
-                                        <button className="btn btn-outline-secondary menu-btn"> Посты </button>
-                                    </Link>
-                                    <Link to={'/categories'}>
-                                        <button className="btn btn-outline-secondary menu-btn"> Категории </button>
-                                    </Link>
-                                    <Link to={'/profile'}>
-                                        <button className="btn btn-outline-secondary menu-btn"> Профиль </button>
-                                    </Link>
+                                <Link to={'/'}>
+                                    <button className="btn btn-outline-secondary menu-btn"> Главная </button>
+                                </Link>
+                                <Link to={'/posts'}>
+                                    <button className="btn btn-outline-secondary menu-btn"> Посты </button>
+                                </Link>
+                                <Link to={'/categories'}>
+                                    <button className="btn btn-outline-secondary menu-btn"> Категории </button>
+                                </Link>
+                                <Link to={'/profile'}>
+                                    <button className="btn btn-outline-secondary menu-btn"> Профиль </button>
+                                </Link>
+                                <button className="btn btn-outline-secondary menu-btn" onClick={this.logOut}> Выйти </button>
+
                             </div>
                         ) : (
                             <div className="btn-group main-page-auth" role="group" aria-label="Basic example">

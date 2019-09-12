@@ -10776,6 +10776,21 @@ body {
   margin-left: 10px;
 }
 
+.admin-header {
+  width: 100%;
+  height: 100px;
+  background-color: #50b9fa;
+  display: flex;
+  align-items: center;
+}
+
+.admin-header .admin-menu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .spinner-block {
   height: calc(100vh - 160px);
   display: flex;

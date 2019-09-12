@@ -7,12 +7,13 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-@import 'Posts';
-@import 'Header';
-@import 'Categories';
-@import 'Profile';
-@import 'FullPost';
-@import 'MainPage';
+@import '../js/components/Public/Posts/Posts';
+@import '../js/components/Public/Header/Header';
+@import '../js/components/Public/Categories/Categories';
+@import '../js/components/Public/Profile/Profile';
+@import '../js/components/Public/Posts/FullPost';
+@import '../js/components/Public/MainPage/MainPage';
+@import '../js/components/Admin/AdminHeader/AdminHeader';
 
 
 .spinner-block {
