@@ -24,30 +24,24 @@ class MainPage extends Component{
     }
 
     render() {
-        console.log(this.props.changeIsAuth);
         const func = this.props.changeIsAuth;
-        console.log('mainpage', func);
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-3 snoop">
-                        <img src="https://i.gifer.com/6os.gif" alt=""/>
-                    </div>
-                    <div className="col-md-9">
-                        <div className="auth-forms">
-                            {
-                              this.props.isAuth ? (<SayHi/>) : (
-                                !this.props.auth ? (<Registration onButtonClick={
-                                    this.props.onButtonClick}/>
-                                    ) :
-                                    (
-                                        <Authorization changeAuth={func}/>
-                                    )
-                              )
-                            }
-
-                        </div>
-                    </div>
+            <div>
+                <div className="auth-forms">
+                    {
+                      this.props.isAuth ? (<SayHi/>) : (
+                        !this.props.auth ? (
+                            <div className="container">
+                                <Registration onButtonClick={this.props.onButtonClick}/>
+                            </div>
+                            ) :
+                            (
+                                <div className="container">
+                                    <Authorization changeAuth={func}/>
+                                </div>
+                            )
+                      )
+                    }
                 </div>
             </div>
         )

@@ -1,58 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc26fb22-97b9-4ca1-8dea-20708d48ace9" name="Default Changelist" comment="add seeders">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Admin/AdminCategories/AdminCategories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Admin/AdminComments/AdminComments.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Admin/AdminHeader/AdminHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Admin/AdminHeader/AdminHeader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Admin/AdminPosts/AdminPosts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Admin/AdminUsers/AdminUsers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Public/Profile/EditProfile/EditProfile.js" afterDir="false" />
+    <list default="true" id="bc26fb22-97b9-4ca1-8dea-20708d48ace9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Admin/AdminPosts/AdminPosts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Public/Public.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Admin/Admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Admin/AdminHeader/AdminHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Admin/AdminHeader/AdminHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Admin/AdminHeader/AdminHeader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Admin/AdminHeader/AdminHeader.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Admin/AdminPosts/AdminPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Admin/AdminPosts/AdminPosts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Auth/Authorization.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Auth/Authorization.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Auth/Registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Auth/Registration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Categories/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Categories/Categories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Header/.sass-cache/ddecfbfd9c2ea10334e08388880bbdb72f7f4b76/Header.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Header/.sass-cache/ddecfbfd9c2ea10334e08388880bbdb72f7f4b76/Header.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/MainPage/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/MainPage/SayHi.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/MainPage/SayHi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Posts/FullPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Posts/FullPost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Posts/Post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Posts/Post/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Posts/Posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Posts/Posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Profile/EditProfile/EditProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Admin/Admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Public/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Public/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Header/Header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Public/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/MainPage/MainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Public/MainPage/SayHi.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/MainPage/SayHi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Public/Posts/Post/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Posts/Post/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Public/Posts/Posts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Posts/Posts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Public/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Public/Profile/Profile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Profile/Profile.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/.sass-cache/e23d1079538951e3e31960319e4044ae4ed2f095/app.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/.sass-cache/e23d1079538951e3e31960319e4044ae4ed2f095/app.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/Categories.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Categories/Categories.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/Categories.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Categories/Categories.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/Categories.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Categories/Categories.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/FullPost.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Posts/FullPost.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/FullPost.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Posts/FullPost.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/FullPost.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Posts/FullPost.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Header/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/Header.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Header/Header.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Header/Header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/MainPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/MainPage/MainPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/MainPage.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/MainPage/MainPage.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/MainPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/MainPage/MainPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/Posts.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Posts/Posts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/Posts.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Posts/Posts.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/Posts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Posts/Posts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/Profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Profile/Profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/Profile.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Profile/Profile.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/Profile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Public/Profile/Profile.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -260,7 +231,11 @@
       <workItem from="1568178305171" duration="4693000" />
       <workItem from="1568193234496" duration="1965000" />
       <workItem from="1568201571142" duration="11650000" />
-      <workItem from="1568287928860" duration="4345000" />
+      <workItem from="1568287928860" duration="11358000" />
+      <workItem from="1568379281497" duration="8220000" />
+      <workItem from="1568555261989" duration="2339000" />
+      <workItem from="1568630301218" duration="4962000" />
+      <workItem from="1568724563819" duration="12063000" />
     </task>
     <task id="LOCAL-00001" summary="add auth view to main page">
       <created>1568012340425</created>
@@ -290,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568132300344</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add register and login">
+      <created>1568292448778</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568292448778</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,6 +295,7 @@
     <MESSAGE value="add auth view to main page" />
     <MESSAGE value="add registration" />
     <MESSAGE value="add seeders" />
-    <option name="LAST_COMMIT_MESSAGE" value="add seeders" />
+    <MESSAGE value="add register and login" />
+    <option name="LAST_COMMIT_MESSAGE" value="add register and login" />
   </component>
 </project>

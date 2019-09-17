@@ -66135,6 +66135,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _AdminHeader_AdminHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AdminHeader/AdminHeader */ "./resources/js/components/Admin/AdminHeader/AdminHeader.js");
+/* harmony import */ var _AdminPosts_AdminPosts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AdminPosts/AdminPosts */ "./resources/js/components/Admin/AdminPosts/AdminPosts.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66156,6 +66158,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
 var Admin =
 /*#__PURE__*/
 function (_Component) {
@@ -66170,7 +66174,7 @@ function (_Component) {
   _createClass(Admin, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminHeader_AdminHeader__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminHeader_AdminHeader__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AdminPosts_AdminPosts__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }]);
 
@@ -66185,6 +66189,90 @@ function (_Component) {
 /*!******************************************************************!*\
   !*** ./resources/js/components/Admin/AdminHeader/AdminHeader.js ***!
   \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var AdminHeader =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(AdminHeader, _Component);
+
+  function AdminHeader() {
+    _classCallCheck(this, AdminHeader);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(AdminHeader).apply(this, arguments));
+  }
+
+  _createClass(AdminHeader, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "admin-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "admin-header-content container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "admin-name col-md-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "\u0410\u0434\u043C\u0435\u043D\u043A\u0430")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "admin-menu col-md-9"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: '/admin/users'
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn btn-outline-light admin-menu-btn"
+      }, " \u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: '/admin/categories'
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn btn-outline-light admin-menu-btn"
+      }, " \u041A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u0438 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: '/admin/posts'
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn btn-outline-light admin-menu-btn"
+      }, " \u0421\u0442\u0430\u0442\u044C\u0438 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: '/admin/comments'
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn btn-outline-light admin-menu-btn"
+      }, " \u041A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0438 "))))));
+    }
+  }]);
+
+  return AdminHeader;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (AdminHeader);
+
+/***/ }),
+
+/***/ "./resources/js/components/Admin/AdminPosts/AdminPosts.js":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/Admin/AdminPosts/AdminPosts.js ***!
+  \****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -66212,44 +66300,32 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var AdminHeader =
+var AdminPosts =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(AdminHeader, _Component);
+  _inherits(AdminPosts, _Component);
 
-  function AdminHeader() {
-    _classCallCheck(this, AdminHeader);
+  function AdminPosts() {
+    _classCallCheck(this, AdminPosts);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(AdminHeader).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(AdminPosts).apply(this, arguments));
   }
 
-  _createClass(AdminHeader, [{
+  _createClass(AdminPosts, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "admin-header"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "admin-header-content container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "admin-name col-md-3"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "\u0410\u0434\u043C\u0435\u043D\u043A\u0430")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "admin-menu col-md-9"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-outline-secondary menu-btn"
-      }, " \u041F\u0440\u043E\u0444\u0438\u043B\u044C "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-outline-secondary menu-btn"
-      }, " \u041F\u0440\u043E\u0444\u0438\u043B\u044C "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-outline-secondary menu-btn"
-      }, " \u041F\u0440\u043E\u0444\u0438\u043B\u044C "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-outline-secondary menu-btn"
-      }, " \u041F\u0440\u043E\u0444\u0438\u043B\u044C "))));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "posts-list-title text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "\u0421\u043F\u0438\u0441\u043E\u043A \u0441\u0442\u0430\u0442\u0435\u0439")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "list-group-item list-group-item-primary"
+      }, "sdfgh")));
     }
   }]);
 
-  return AdminHeader;
+  return AdminPosts;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (AdminHeader);
+/* harmony default export */ __webpack_exports__["default"] = (AdminPosts);
 
 /***/ }),
 
@@ -66277,7 +66353,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Public_Auth_Authorization__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Public/Auth/Authorization */ "./resources/js/components/Public/Auth/Authorization.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _Public_Categories_Categories__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Public/Categories/Categories */ "./resources/js/components/Public/Categories/Categories.js");
-/* harmony import */ var _Admin_Admin__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Admin/Admin */ "./resources/js/components/Admin/Admin.js");
+/* harmony import */ var _Admin_AdminPosts_AdminPosts__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Admin/AdminPosts/AdminPosts */ "./resources/js/components/Admin/AdminPosts/AdminPosts.js");
+/* harmony import */ var _Admin_Admin__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Admin/Admin */ "./resources/js/components/Admin/Admin.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66295,6 +66372,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -66323,7 +66401,8 @@ function (_PureComponent) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
     _this.state = {
       isAuth: '',
-      auth: true
+      auth: true,
+      user: {}
     };
     _this.onButtonClick = _this.onButtonClick.bind(_assertThisInitialized(_this));
     _this.changeIsAuth = _this.changeIsAuth.bind(_assertThisInitialized(_this));
@@ -66400,6 +66479,9 @@ function (_PureComponent) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
         path: '/author/:id',
         component: _Public_Profile_Profile__WEBPACK_IMPORTED_MODULE_7__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
+        path: '/admin',
+        component: _Admin_Admin__WEBPACK_IMPORTED_MODULE_13__["default"]
       })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__["Route"], {
         path: '/',
         exact: true,
@@ -67037,9 +67119,11 @@ function (_PureComponent) {
     value: function render() {
       var func = this.props.onButtonClick;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "jumbotron full-head"
+        className: "full-head"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container header "
+        className: "header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header-content container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "name"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "\u0411\u043B\u043E\u0433")), this.props.isAuth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -67047,23 +67131,25 @@ function (_PureComponent) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: '/'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-outline-secondary menu-btn"
+        className: "btn btn-outline-light menu-btn"
       }, " \u0413\u043B\u0430\u0432\u043D\u0430\u044F ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: '/posts'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-outline-secondary menu-btn"
-      }, " \u041F\u043E\u0441\u0442\u044B ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "btn btn-outline-light menu-btn"
+      }, " \u0421\u0442\u0430\u0442\u044C\u0438 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: '/categories'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-outline-secondary menu-btn"
+        className: "btn btn-outline-light menu-btn"
       }, " \u041A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u0438 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: '/profile'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-outline-secondary menu-btn"
-      }, " \u041F\u0440\u043E\u0444\u0438\u043B\u044C ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-outline-secondary menu-btn",
+        className: "btn btn-outline-light menu-btn"
+      }, " \u041F\u0440\u043E\u0444\u0438\u043B\u044C ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: '/'
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn btn-warning menu-btn log-out-btn",
         onClick: this.logOut
-      }, " \u0412\u044B\u0439\u0442\u0438 ")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, " \u0412\u044B\u0439\u0442\u0438 "))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "btn-group main-page-auth",
         role: "group",
         "aria-label": "Basic example"
@@ -67073,7 +67159,7 @@ function (_PureComponent) {
         type: "button",
         className: "btn btn-secondary",
         onClick: func
-      }, this.props.auth ? 'Регистрация' : 'Авторизация')))));
+      }, this.props.auth ? 'Регистрация' : 'Авторизация'))))));
     }
   }]);
 
@@ -67161,27 +67247,18 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props.changeIsAuth);
       var func = this.props.changeIsAuth;
-      console.log('mainpage', func);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3 snoop"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "https://i.gifer.com/6os.gif",
-        alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-9"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "auth-forms"
-      }, this.props.isAuth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SayHi__WEBPACK_IMPORTED_MODULE_9__["default"], null) : !this.props.auth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Registration__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, this.props.isAuth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SayHi__WEBPACK_IMPORTED_MODULE_9__["default"], null) : !this.props.auth ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Registration__WEBPACK_IMPORTED_MODULE_1__["default"], {
         onButtonClick: this.props.onButtonClick
-      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Authorization__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Auth_Authorization__WEBPACK_IMPORTED_MODULE_5__["default"], {
         changeAuth: func
-      })))));
+      }))));
     }
   }]);
 
@@ -67237,7 +67314,9 @@ function (_Component) {
   _createClass(SayHi, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "\u041F\u043E\u0437\u0434\u0440\u0430\u0432\u043B\u044F\u0435\u043C \u0412\u0430\u0441!", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "\u0412\u044B \u043F\u043E\u043F\u0430\u043B\u0438 \u043D\u0430 \u0441\u0430\u043C\u044B\u0439 \u043F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u044B\u0439 \u043F\u043E\u0441\u043B\u0435 \u0444\u0435\u0439\u0441\u0431\u0443\u043A\u0430 \u0438 \u0435\u0449\u0435 \u043C\u0438\u043B\u043B\u0438\u0430\u0440\u0434\u0430 \u0441\u0435\u0440\u0432\u0438\u0441\u043E\u0432 \u0441\u0430\u0439\u0442."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Congratulations!!!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "\u0412 \u0434\u0430\u043D\u043D\u043E\u043C \u0431\u043B\u043E\u0433\u0435 \u0432\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F \u0441\u0432\u043E\u0438\u043C\u0438 \u0437\u043D\u0430\u043D\u0438\u044F\u043C\u0438 \u0441 \u0434\u0440\u0443\u0433\u0438\u043C\u0438, \u0430 \u0442\u0430\u043A \u0436\u0435 \u0447\u0435\u0440\u043F\u0430\u0442\u044C \u0438\u0445 \u043E\u0442 \u0434\u0440\u0443\u0433\u0438\u0445 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u0439."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "\u041A\u0441\u0442\u0430\u0442\u0438 \u0433\u0438\u0444\u043A\u0430 \u043D\u0438\u0447\u0435\u0433\u043E \u0442\u0430\u043A\u0430\u044F, \u043F\u0440\u0430\u0432\u0434\u0430?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u0412\u0441\u0435 \u043F\u0440\u0430\u0432\u0430 \u0437\u0430\u0449\u0438\u0449\u0435\u043D\u044B."));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "main-img"
+      });
     }
   }]);
 
@@ -67436,7 +67515,7 @@ function (_Component) {
         className: "info-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "text-justify card-text"
-      }, " ", this.props.post.content, " ")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.props.post.content.slice(0, 700) + '...')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "full-post-btn"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: '/fullpost/' + this.props.post.id
@@ -67713,19 +67792,27 @@ function (_Component) {
   }, {
     key: "showPosts",
     value: function showPosts() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "\u041F\u043E\u0441\u0442\u044B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card"
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "users-post-list-card"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "users-post-list-title"
+      }, "\u0421\u0442\u0430\u0442\u044C\u0438"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-cards"
       }, this.state.posts.map(function (post, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "card-header",
+          className: "post-card row",
           key: post.id
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "profile-post-title col-sm-10"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
           className: "profile-posts-titles"
-        }, post.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        }, post.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "profile-post-button col-sm-2"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
           to: '/fullpost/' + post.id
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "btn profile-posts-button btn-outline-secondary"
-        }, "\u0427\u0438\u0442\u0430\u0442\u044C")));
+        }, "\u0427\u0438\u0442\u0430\u0442\u044C"))));
       })));
     }
   }, {
@@ -67744,8 +67831,8 @@ function (_Component) {
         className: "rounded"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user-name"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Mitya Khlopyanikov")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-outline-secondary",
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Mitya Khlopyanikov")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn btn-edit btn-outline-secondary",
         onClick: this.editProfile
       }, "\u0420\u0435\u0434\u0430\u043A\u0442\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u043F\u0440\u043E\u0444\u0438\u043B\u044C")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "user-posts col-md-8"

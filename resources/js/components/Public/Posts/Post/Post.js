@@ -32,7 +32,11 @@ class Post extends Component {
                         </div>
                         <div className="main-info d-flex flex-column">
                             <div className="info-text">
-                                <p className="text-justify card-text"> {this.props.post.content} </p>
+                                <p className="text-justify card-text">
+                                    {
+                                        this.props.post.content.slice(0, 700) + '...'
+                                    }
+                                </p>
                             </div>
                         </div>
                     </div>

@@ -4,8 +4,14 @@
 // Variables
 @import 'variables';
 
+
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+#root {
+    font-family: 'Kelly Slab', cursive;
+}
 
 @import '../js/components/Public/Posts/Posts';
 @import '../js/components/Public/Header/Header';
@@ -14,12 +20,20 @@
 @import '../js/components/Public/Posts/FullPost';
 @import '../js/components/Public/MainPage/MainPage';
 @import '../js/components/Admin/AdminHeader/AdminHeader';
-
+@import '../js/components/Admin/AdminPosts/AdminPosts';
 
 .spinner-block {
   height: calc(100vh - 160px);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.main-img {
+    width: 100%;
+    height: calc(100vh - 50px);
+    margin-top: -50px;
+    background-size: 100% 100%;
+    background-image: url("https://images.wallpaperscraft.ru/image/bloknot_nadpis_flomastery_117959_1920x1080.jpg");
 }
 

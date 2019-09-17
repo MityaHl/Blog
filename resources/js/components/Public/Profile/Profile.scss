@@ -6,10 +6,31 @@
   }
 }
 
-.profile-posts-button {
-  float: right;
+.users-post-list-card {
+    width: 95%;
 }
 
-.profile-posts-titles {
-  float: left;
+.users-post-list-title {
+    font-family: 'Marck Script', cursive;
 }
+
+.user-name {
+    margin: 10px 0px 20px 0px;
+    font-family: 'Marck Script', cursive;
+}
+
+.post-card {
+  min-height: 60px;
+  border: 1px solid #cdcfd1;
+  border-radius: 5px;
+  background-color: #b8daff;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .profile-post-title {
+      margin: 0!important;
+
+  }
+}
+

@@ -8,8 +8,9 @@ import FullPost from './Public/Posts/FullPost';
 import Profile from './Public/Profile/Profile'
 import Registration from './Public/Auth/Registration'
 import Authorization from './Public/Auth/Authorization'
-import {BrowserRouter, Route, Redirect, Switch} from "react-router-dom";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Categories from "./Public/Categories/Categories";
+import AdminPosts from "./Admin/AdminPosts/AdminPosts";
 import Admin from './Admin/Admin';
 
 class App extends PureComponent{
@@ -18,7 +19,8 @@ class App extends PureComponent{
         super(props);
         this.state = {
             isAuth: '',
-            auth: true
+            auth: true,
+            user: {}
         };
         this.onButtonClick = this.onButtonClick.bind(this);
         this.changeIsAuth = this.changeIsAuth.bind(this);
@@ -38,6 +40,7 @@ class App extends PureComponent{
             isAuth: !this.state.isAuth
         })
     }
+
 
     onButtonClick() {
             this.setState({
@@ -59,8 +62,7 @@ class App extends PureComponent{
                         }
                         funcIsAuth = {
                             funcIsAuth
-                        }
-                    />
+                        }/>
                     {
                         this.state.isAuth ? (
                             <Switch>
@@ -75,6 +77,8 @@ class App extends PureComponent{
                                 <Route path={'/profile'} component={Profile}/>
                                 <Route path={'/fullpost/:id'} component={FullPost}/>
                                 <Route path={'/author/:id'} component={Profile}/>
+                                <Route path={'/admin'} component={Admin}/>
+
                             </Switch>
                         ) : (
                             <Switch>

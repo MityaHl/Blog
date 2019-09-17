@@ -1,21 +1,21 @@
 /*
 Error: File to import not found or unreadable: ~bootstrap/scss/bootstrap.
-        on line 8 of app.scss
+        on line 10 of app.scss
 
-3: 
-4: // Variables
 5: @import 'variables';
 6: 
-7: // Bootstrap
-8: @import '~bootstrap/scss/bootstrap';
-9: 
-10: @import '../js/components/Public/Posts/Posts';
-11: @import '../js/components/Public/Header/Header';
-12: @import '../js/components/Public/Categories/Categories';
-13: @import '../js/components/Public/Profile/Profile';
+7: 
+8: 
+9: // Bootstrap
+10: @import '~bootstrap/scss/bootstrap';
+11: 
+12: #root {
+13:     font-family: 'Kelly Slab', cursive;
+14: }
+15: 
 
 Backtrace:
-app.scss:8
+app.scss:10
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:44:in `import'
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -53,4 +53,4 @@ C:/Ruby26-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ~bootstrap/scss/bootstrap.\A         on line 8 of app.scss\A \A 3: \A 4: // Variables\A 5: @import 'variables';\A 6: \A 7: // Bootstrap\A 8: @import '~bootstrap/scss/bootstrap';\A 9: \A 10: @import '../js/components/Public/Posts/Posts';\A 11: @import '../js/components/Public/Header/Header';\A 12: @import '../js/components/Public/Categories/Categories';\A 13: @import '../js/components/Public/Profile/Profile';"; }
+  content: "Error: File to import not found or unreadable: ~bootstrap/scss/bootstrap.\A         on line 10 of app.scss\A \A 5: @import 'variables';\A 6: \A 7: \A 8: \A 9: // Bootstrap\A 10: @import '~bootstrap/scss/bootstrap';\A 11: \A 12: #root {\A 13:     font-family: 'Kelly Slab', cursive;\A 14: }\A 15: "; }

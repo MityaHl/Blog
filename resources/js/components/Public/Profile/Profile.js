@@ -66,16 +66,23 @@ class Profile extends Component{
 
     showPosts() {
         return (
-            <div>
-                <h1>Посты</h1>
-                <div className="card">
+            <div className="users-post-list-card">
+                <h1 className="users-post-list-title">Статьи</h1>
+                <div className="post-cards">
                     {
                         this.state.posts.map((post, index) => (
-                            <div className="card-header" key={post.id}>
-                                <h3 className="profile-posts-titles">{post.title}</h3>
-                                <Link to={'/fullpost/' + post.id}>
-                                    <button className="btn profile-posts-button btn-outline-secondary" >Читать</button>
-                                </Link>
+                            <div className="post-card row" key={post.id}>
+
+                                <div className="profile-post-title col-sm-10">
+                                    <h5 className="profile-posts-titles">{post.title}</h5>
+                                </div>
+
+                                <div className="profile-post-button col-sm-2">
+                                    <Link to={'/fullpost/' + post.id}>
+                                        <button className="btn profile-posts-button btn-outline-secondary" >Читать</button>
+                                    </Link>
+                                </div>
+
                             </div>
                         ))
                     }
@@ -92,9 +99,9 @@ class Profile extends Component{
                        <img src="https://sun9-55.userapi.com/c836435/v836435967/2c962/ZjNR1MUQ3MU.jpg" alt=""
                             className="rounded"/>
                         <div className="user-name">
-                            <h4>Mitya Khlopyanikov</h4>
+                            <h3>Mitya Khlopyanikov</h3>
                         </div>
-                       <button className="btn btn-outline-secondary" onClick={this.editProfile}>Редактировать профиль</button>
+                       <button className="btn btn-edit btn-outline-secondary" onClick={this.editProfile}>Редактировать профиль</button>
                    </div>
                    <div className="user-posts col-md-8">
                        {

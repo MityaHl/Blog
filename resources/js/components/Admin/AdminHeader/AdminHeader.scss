@@ -1,13 +1,22 @@
 .admin-header {
-    width: 100%;
-    height: 100px;
-    background-color: #50b9fa;
     display: flex;
     align-items: center;
+    width: 100%;
+    background-color: #50b9fa;
+    .admin-name {
+        float: left;
+        h1 {
+            color: #fff;
+        }
+    }
     .admin-menu {
-        width: 100%;
         display: flex;
+        float: right;
         justify-content: flex-end;
         align-items: center;
+        .admin-menu-btn {
+            width: 130px;
+            margin-right: 10px;
+        }
     }
 }

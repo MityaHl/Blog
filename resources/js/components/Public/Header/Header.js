@@ -17,41 +17,44 @@ class Header extends PureComponent{
     render() {
         const func = this.props.onButtonClick;
         return (
-            <div className="jumbotron full-head">
-                <div className="container header ">
-                    <div className="name">
-                        <h1>Блог</h1>
-                    </div>
-                    {
-                        this.props.isAuth ? (
-                            <div className="menu list-inline">
-                                <Link to={'/'}>
-                                    <button className="btn btn-outline-secondary menu-btn"> Главная </button>
-                                </Link>
-                                <Link to={'/posts'}>
-                                    <button className="btn btn-outline-secondary menu-btn"> Посты </button>
-                                </Link>
-                                <Link to={'/categories'}>
-                                    <button className="btn btn-outline-secondary menu-btn"> Категории </button>
-                                </Link>
-                                <Link to={'/profile'}>
-                                    <button className="btn btn-outline-secondary menu-btn"> Профиль </button>
-                                </Link>
-                                <button className="btn btn-outline-secondary menu-btn" onClick={this.logOut}> Выйти </button>
-
-                            </div>
-                        ) : (
-                            <div className="btn-group main-page-auth" role="group" aria-label="Basic example">
-                                <div className="auth-buttons">
-                                    <button type="button" className="btn btn-secondary" onClick={func}>
-                                        {
-                                            this.props.auth ? 'Регистрация' : 'Авторизация'
-                                        }
-                                    </button>
+            <div className="full-head">
+                <div className="header">
+                    <div className="header-content container">
+                        <div className="name">
+                            <h1>Блог</h1>
+                        </div>
+                        {
+                            this.props.isAuth ? (
+                                <div className="menu list-inline">
+                                    <Link to={'/'}>
+                                        <button className="btn btn-outline-light menu-btn"> Главная </button>
+                                    </Link>
+                                    <Link to={'/posts'}>
+                                        <button className="btn btn-outline-light menu-btn"> Статьи </button>
+                                    </Link>
+                                    <Link to={'/categories'}>
+                                        <button className="btn btn-outline-light menu-btn"> Категории </button>
+                                    </Link>
+                                    <Link to={'/profile'}>
+                                        <button className="btn btn-outline-light menu-btn"> Профиль </button>
+                                    </Link>
+                                    <Link to={'/'}>
+                                        <button className="btn btn-warning menu-btn log-out-btn" onClick={this.logOut}> Выйти </button>
+                                    </Link>
                                 </div>
-                            </div>
-                        )
-                    }
+                            ) : (
+                                <div className="btn-group main-page-auth" role="group" aria-label="Basic example">
+                                    <div className="auth-buttons">
+                                        <button type="button" className="btn btn-secondary" onClick={func}>
+                                            {
+                                                this.props.auth ? 'Регистрация' : 'Авторизация'
+                                            }
+                                        </button>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    </div>
                 </div>
             </div>
         )
