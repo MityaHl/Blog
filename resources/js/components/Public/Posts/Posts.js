@@ -65,7 +65,7 @@ class Posts extends Component {
             <div>
                 {
                     this.state.posts.map((post, index) => (
-                        <Post post={post} authors={authors} categories={categories}/>
+                        <Post post={post} authors={authors} categories={categories} key={index}/>
                     ))
                 }
             </div>

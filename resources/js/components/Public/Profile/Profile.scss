@@ -1,4 +1,6 @@
 .user-info {
+    position: sticky!important;
+    top: 100px;
   img {
     width: 250px;
     max-height: 90%;
@@ -6,9 +8,7 @@
   }
 }
 
-.users-post-list-card {
-    width: 95%;
-}
+
 
 .users-post-list-title {
     font-family: 'Marck Script', cursive;
@@ -19,7 +19,19 @@
     font-family: 'Marck Script', cursive;
 }
 
+.post-cards::-webkit-scrollbar { width: 7px; height: 3px;}
+.post-cards::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+.post-cards::-webkit-scrollbar-thumb { height: 50px; background-color: #b8daff; border-radius: 3px;}
+.post-cards::-webkit-scrollbar-corner { background-color: #999;}
+.post-cards::-webkit-resizer { background-color: #666;}
+
+.post-cards {
+    overflow-y: scroll;
+    height: 70vh;
+}
+
 .post-card {
+    width: 99%;
   min-height: 60px;
   border: 1px solid #cdcfd1;
   border-radius: 5px;

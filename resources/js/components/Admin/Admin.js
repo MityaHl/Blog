@@ -1,15 +1,21 @@
 import React, {Component} from 'react'
 import AdminHeader from './AdminHeader/AdminHeader'
 import AdminPosts from './AdminPosts/AdminPosts'
+import AdminUsers from './AdminUsers/AdminUsers'
+import {Route} from "react-router-dom";
+import AdminCategories from "./AdminCategories/AdminCategories";
+import CreatePost from "./AdminPosts/Create/CreatePost";
 
-import {BrowserRouter} from "react-router-dom";
 class Admin extends Component {
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <AdminHeader/>
-                <AdminPosts/>
-            </div>
+                <Route path={'/admin/posts'} exact component={ AdminPosts } />
+                <Route path={'/admin/posts/create'} exact component={ CreatePost } />
+                <Route path={'/admin/users'} exact component={ AdminUsers } />
+                <Route path={'/admin/categories'} exact component={ AdminCategories } />
+            </React.Fragment>
         )
     }
 }

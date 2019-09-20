@@ -67,17 +67,16 @@ class Profile extends Component{
     showPosts() {
         return (
             <div className="users-post-list-card">
-                <h1 className="users-post-list-title">Статьи</h1>
                 <div className="post-cards">
                     {
                         this.state.posts.map((post, index) => (
-                            <div className="post-card row" key={post.id}>
+                            <div className="post-card" key={post.id}>
 
-                                <div className="profile-post-title col-sm-10">
+                                <div className="profile-post-title col-md-10">
                                     <h5 className="profile-posts-titles">{post.title}</h5>
                                 </div>
 
-                                <div className="profile-post-button col-sm-2">
+                                <div className="profile-post-button col-md-2">
                                     <Link to={'/fullpost/' + post.id}>
                                         <button className="btn profile-posts-button btn-outline-secondary" >Читать</button>
                                     </Link>
@@ -105,7 +104,14 @@ class Profile extends Component{
                    </div>
                    <div className="user-posts col-md-8">
                        {
-                           posts instanceof Array  && this.state.count ? (this.showPosts()) : (this.showNothing())
+                           posts instanceof Array  && this.state.count ? (
+                               <div className="post-table">
+                                   <h1 className="users-post-list-title">Статьи</h1>
+                                   {
+                                       this.showPosts()
+                                   }
+                               </div>
+                           ) : (this.showNothing())
                        }
                    </div>
                </div>

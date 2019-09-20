@@ -7,10 +7,16 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::with('categories', 'users')->get();
         return response()->json($posts);
+    }
+
+    public function store(Request $request) {
+        Post::add($request->all());
+        return response()->json('create post');
     }
 
     public function show($id) {
