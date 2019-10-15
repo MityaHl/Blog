@@ -9,7 +9,7 @@
         <!-- Fonts -->
         <script src="https://kit.fontawesome.com/ff9ac099ba.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link href="http://allfont.ru/allfont.css?fonts=capture-it" rel="stylesheet" type="text/css" />
+        <link href="//allfont.ru/allfont.css?fonts=capture-it" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Marck+Script&display=swap" rel="stylesheet">
         <!-- Styles -->
 
